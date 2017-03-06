@@ -1,2 +1,11 @@
-body{border-left:10px solid red}
-h1{border-left:10px solid green}
+
+// Core variables and mixins
+@import "base/variables";
+@import "base/mixins";
+
+
+
+
+p.moataz{
+    @include font-size($xl-font);
+}

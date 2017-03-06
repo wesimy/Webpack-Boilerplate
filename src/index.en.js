@@ -16,22 +16,21 @@ require('bootstrap');
 require('swiper'); 
 
 //////////////////  
-// APP JS FILES
+// APP SCSS FILES
 // do not change this 
 // Imports custom js modules in JS folder
 //////////////////////////////////////////
-var requireTest = require.context('./scss', true, /\.scss$/);
-requireTest.keys().forEach(requireTest); 
+var requireSCSS = require.context('./scss', false, /\.scss$/);
+requireSCSS.keys().forEach(requireSCSS); 
 
 ////////////////// 
 // APP JS FILES
 // do not change this 
 // Imports custom js modules in JS folder
 //////////////////////////////////////////
-var requireTest = require.context('./js', true, /\.js$/);
-requireTest.keys().forEach(requireTest); 
+var requireJS = require.context('./js', true, /\.js$/);
+requireJS.keys().forEach(requireJS); 
  
-
 //////////////////
 // APP INIT
 // Application Init module. 

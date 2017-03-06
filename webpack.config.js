@@ -9,7 +9,7 @@ var enConfig = {
     watch: true,
     entry: {
         en: ['./src/index.en.js'],
-     //   ar: ['./src/index.ar.js'],
+        //   ar: ['./src/index.ar.js'],
     },
     output: {
         path: __dirname + "/dist",
@@ -17,7 +17,13 @@ var enConfig = {
     },
     module: {
         rules: [
-           {
+            {
+                enforce: 'pre',
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "jshint-loader"
+            },
+            {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
                     use: [{
@@ -42,14 +48,13 @@ var enConfig = {
     plugins: [
         new ExtractTextPlugin("app.[name].css"),
     ]
-}
-
+};
 
 var arConfig = {
     context: __dirname,
     watch: true,
     entry: {
-       // en: ['./src/index.en.js'],
+        // en: ['./src/index.en.js'],
         ar: ['./src/index.ar.js'],
     },
     output: {
@@ -58,7 +63,13 @@ var arConfig = {
     },
     module: {
         rules: [
-           {
+            {
+                enforce: 'pre',
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "jshint-loader"
+            },
+            {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
                     use: [{
@@ -83,7 +94,7 @@ var arConfig = {
     plugins: [
         new ExtractTextPlugin("app.[name].css"),
     ]
-}
+};
 
 
-module.exports = [enConfig,arConfig];
+module.exports = [enConfig, arConfig];
