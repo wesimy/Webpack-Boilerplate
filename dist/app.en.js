@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 16);
+/******/ 	return __webpack_require__(__webpack_require__.s = 15);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -95,6 +95,54 @@ module.exports = g;
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/////////////////////////
+// Library CSS Files
+// Add your library css files here
+///////////////////////////////////////////////
+__webpack_require__(6); 
+__webpack_require__(20); 
+
+//////////////////
+// LIBRARY FILES
+// Add your custom library js requires here
+// use: expose-loader  to expose a library to public access
+////////////////////////////////////////////////////////////
+__webpack_require__(3);
+__webpack_require__(5);
+__webpack_require__(2);
+__webpack_require__(9); 
+
+//////////////////  
+// APP JS FILES
+// do not change this 
+// Imports custom js modules in JS folder
+//////////////////////////////////////////
+var requireTest = __webpack_require__(14);
+requireTest.keys().forEach(requireTest); 
+
+////////////////// 
+// APP JS FILES
+// do not change this 
+// Imports custom js modules in JS folder
+//////////////////////////////////////////
+var requireTest = __webpack_require__(11);
+requireTest.keys().forEach(requireTest); 
+ 
+
+//////////////////
+// APP INIT
+// Application Init module. 
+////////////////////////////////////////////////////////////
+
+$().ready(function(){
+    alert('c');    
+});
+
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports) {
 
 /*!
@@ -3635,29 +3683,41 @@ var Popover = function ($) {
 
 
 /***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["$"] = __webpack_require__(3);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["jQuery"] = __webpack_require__(5);
+/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["$"] = __webpack_require__(4);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {if(!global["window"]) global["window"] = {};
-module.exports = global["window"]["Tether"] = __webpack_require__(9);
+/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["jQuery"] = __webpack_require__(8);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {if(!global["window"]) global["window"] = {};
+module.exports = global["window"]["Tether"] = __webpack_require__(10);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -13884,139 +13944,7 @@ return jQuery;
 
 
 /***/ }),
-/* 6 */
-/***/ (function(module, exports) {
-
-////
-//Application Module
-////////////////////
-
- var app = (function () {   
-     "use strict";  
-     //-----------------------------------------------------------------
-     // Page Initalization handler : exposed to app.init();
-     //-----------------------------------------------------------------
-     var init = function () {
-             // Hide Preloader when page has loaded
-             //_preLoaderHandler();
-             //_scrollToTopHandler();
-             //_customSelectBox(); 
-             //_stickyNavHandler('sticky');
-             //_countupNumbers($('.numeric-highlights'));
-             //_socialSidebarHabdler($('.side-bar .social-links'));
-             //_socialNavHandler($("#page-hd #social-links"));
-            _swipeHandler();  
-         //alert('main');
-         
-         //scrollToTop.init();
-         
-         },
-         //-----------------------------------------------------------------
-         // Helper Function: Add CSS Class to page-hd element on scroll
-         //-----------------------------------------------------------------
-
-         _swipeHandler = function (c) {
-             
-        var swiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
-            paginationClickable: true,
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            spaceBetween: 30
-
-        });
-         },
-      _stickyNavHandler = function (c) {
-             $(window).scroll(function () {
-                 if ($(window).scrollTop() <= 20) {
-                     $('#page-hd').removeClass(c);
-                 } else {
-                     $('#page-hd').addClass(c);
-                 }
-             }); 
-         };
-         // Expose Global Functions
-     return {
-         init: init
-     };
- })();
- $().ready(function () {
-     app.init();
-     //scrollToTop.init();
- });
-
-
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports) {
-
-/**
- * ScrollToTop 3.4.1
- * Licensed under MIT
- */
-//var scrollToTop = function () {
-//    var s = this;
-//    var defaults = {
-//        speed: 300,
-//    };
-//
-//    var init = function () {
-//        console.log('init scrollToTop');
-//    }; 
-//    return {
-//        init: init 
-//    };  
-//};
-//
-
-
-
-
-var scrollToTop = (function () {
-    "use strict";
-    //-----------------------------------------------------------------
-    // Page Initalization handler : exposed to app.init();
-    //-----------------------------------------------------------------
-    var init = function () {
-            alert('scrollToTop');
-        
-        },
-        //-----------------------------------------------------------------
-        // Helper Function: Add CSS Class to page-hd element on scroll
-        //-----------------------------------------------------------------
-
-        _swipeHandler = function (c) {
-
-            //        var swiper = new Swiper('.swiper-container', {
-            //            pagination: '.swiper-pagination',
-            //            paginationClickable: true,
-            //            nextButton: '.swiper-button-next',
-            //            prevButton: '.swiper-button-prev',
-            //            spaceBetween: 30
-            //
-            //        });
-        },
-        _stickyNavHandler = function (c) {
-//            $(window).scroll(function () {
-//                if ($(window).scrollTop() <= 20) {
-//                    $('#page-hd').removeClass(c);
-//                } else {
-//                    $('#page-hd').addClass(c);
-//                }
-//            });
-        };
-    // Expose Global Functions
-    return {
-        init: init
-    };
-})();
-$().ready(function () {
-    
-});
-
-/***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -19355,7 +19283,7 @@ else if (typeof define === 'function' && define.amd) {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! tether 1.4.0 */
@@ -21176,12 +21104,12 @@ return Tether;
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./main.js": 6,
-	"./scrollToTop.js": 7
+	"./main.js": 12,
+	"./scrollToTop.js": 13
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -21197,63 +21125,181 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 10;
+webpackContext.id = 11;
 
 
 /***/ }),
-/* 11 */,
 /* 12 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-/////////////////////////
-// APP SCSS Entery Point
-// Do not change this
-///////////////////////////////////////////////
-__webpack_require__(14);
+////
+//Application Module
+////////////////////
 
-//////////////////
-// LIBRARY FILES
-// Add your custom library requires here
-// use: expose-loader  to expose a library to public access
-////////////////////////////////////////////////////////////
-__webpack_require__(2);
-__webpack_require__(4);
-__webpack_require__(1);
-__webpack_require__(8); 
+ var app = (function () {   
+     "use strict";  
+     //-----------------------------------------------------------------
+     // Page Initalization handler : exposed to app.init();
+     //-----------------------------------------------------------------
+     var init = function () {
+             // Hide Preloader when page has loaded
+             //_preLoaderHandler();
+             //_scrollToTopHandler();
+             //_customSelectBox(); 
+             //_stickyNavHandler('sticky');
+             //_countupNumbers($('.numeric-highlights'));
+             //_socialSidebarHabdler($('.side-bar .social-links'));
+             //_socialNavHandler($("#page-hd #social-links"));
+            _swipeHandler();  
+         //alert('main');
+         
+         //scrollToTop.init();
+         
+         },
+         //-----------------------------------------------------------------
+         // Helper Function: Add CSS Class to page-hd element on scroll
+         //-----------------------------------------------------------------
 
-//////////////////
-// APP JS FILES
-// do not change this
-// Imports custom js modules in JS folder
-//////////////////////////////////////////
-function requireAll(r) { r.keys().forEach(r); }
-requireAll(__webpack_require__(10) );
+         _swipeHandler = function (c) {
+             
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            spaceBetween: 30
+
+        });
+         },
+      _stickyNavHandler = function (c) {
+             $(window).scroll(function () {
+                 if ($(window).scrollTop() <= 20) {
+                     $('#page-hd').removeClass(c);
+                 } else {
+                     $('#page-hd').addClass(c);
+                 }
+             }); 
+         };
+         // Expose Global Functions
+     return {
+         init: init
+     };
+ })();
+ $().ready(function () {
+     app.init();
+     //scrollToTop.init();
+ });
 
 
-//////////////////
-// APP INIT
-// Application Init module. 
-////////////////////////////////////////////////////////////
 
-$().ready(function(){
-    alert('c');    
+/***/ }),
+/* 13 */
+/***/ (function(module, exports) {
+
+/**
+ * ScrollToTop 3.4.1
+ * Licensed under MIT
+ */
+//var scrollToTop = function () {
+//    var s = this;
+//    var defaults = {
+//        speed: 300,
+//    };
+//
+//    var init = function () {
+//        console.log('init scrollToTop');
+//    }; 
+//    return {
+//        init: init 
+//    };  
+//};
+//
+
+
+
+
+var scrollToTop = (function () {
+    "use strict";
+    //-----------------------------------------------------------------
+    // Page Initalization handler : exposed to app.init();
+    //-----------------------------------------------------------------
+    var init = function () {
+            alert('scrollToTop');
+        
+        },
+        //-----------------------------------------------------------------
+        // Helper Function: Add CSS Class to page-hd element on scroll
+        //-----------------------------------------------------------------
+
+        _swipeHandler = function (c) {
+
+            //        var swiper = new Swiper('.swiper-container', {
+            //            pagination: '.swiper-pagination',
+            //            paginationClickable: true,
+            //            nextButton: '.swiper-button-next',
+            //            prevButton: '.swiper-button-prev',
+            //            spaceBetween: 30
+            //
+            //        });
+        },
+        _stickyNavHandler = function (c) {
+//            $(window).scroll(function () {
+//                if ($(window).scrollTop() <= 20) {
+//                    $('#page-hd').removeClass(c);
+//                } else {
+//                    $('#page-hd').addClass(c);
+//                }
+//            });
+        };
+    // Expose Global Functions
+    return {
+        init: init
+    };
+})();
+$().ready(function () {
+    
 });
 
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./layout.scss": 7
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 14;
+
 
 /***/ }),
-/* 13 */,
-/* 14 */
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(1);
+
+
+/***/ }),
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 15 */,
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(12);
-
 
 /***/ })
 /******/ ]);
