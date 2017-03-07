@@ -1,11 +1,23 @@
+@import 'base/base';
 
-// Core variables and mixins
-@import "base/variables";
-@import "base/mixins";
+.moataz{
+
+background: #00ff00; /*! rtl: #ff0000; */
+
+}
 
 
 
-
-p.moataz{
-    @include font-size($xl-font);
+a {
+  color: blue;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  background-color: orange;
+  border-radius: 4px;
+  @include transition(background-color 1s .5s, color 2s);
+}
+a:hover {
+   color: red; 
+  background-color: blue;
 }

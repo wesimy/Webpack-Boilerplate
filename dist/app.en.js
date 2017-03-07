@@ -135,9 +135,6 @@ requireJS.keys().forEach(requireJS);
 // Application Init module. 
 ////////////////////////////////////////////////////////////
 
-$().ready(function(){
-    alert('c');    
-});
 
 
 /***/ }),

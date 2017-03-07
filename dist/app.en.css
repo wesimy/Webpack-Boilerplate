@@ -9892,17 +9892,22 @@ button.swiper-pagination-bullet {
     transform: rotate(360deg);
   }
 }
-p.moataz {
-  font-size: 5px; }
-  @media screen and (min-width: 0) {
-    p.moataz {
-      font-size: 16px; } }
-  @media screen and (min-width: 576px) {
-    p.moataz {
-      font-size: 49px; } }
-  @media screen and (min-width: 992px) {
-    p.moataz {
-      font-size: 119px; } }
-  @media screen and (min-width: xg) {
-    p.moataz {
-      font-size: 119px; } }
+.moataz {
+  background: #00ff00;
+  /*! rtl: #ff0000; */ }
+
+a {
+  color: blue;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  background-color: orange;
+  border-radius: 4px;
+  -moz-transition: background-color 1s 0.5s, color 2s;
+  -o-transition: background-color 1s 0.5s, color 2s;
+  -webkit-transition: background-color 1s 0.5s, color 2s;
+  transition: background-color 1s 0.5s, color 2s; }
+
+a:hover {
+  color: red;
+  background-color: blue; }

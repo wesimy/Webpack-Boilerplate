@@ -132,13 +132,6 @@ var requireJS = __webpack_require__(14);
 requireJS.keys().forEach(requireJS); 
  
 
-//////////////////
-// APP INIT
-// Application Init module.  
-////////////////////////////////////////////////////////////
-$().ready(function(){
-    alert('ar');
-});
 
 /***/ }),
 /* 2 */

@@ -32,11 +32,3 @@ requireSCSS.keys().forEach(requireSCSS);
 var requireJS = require.context('./js', true, /\.js$/);
 requireJS.keys().forEach(requireJS); 
  
-
-//////////////////
-// APP INIT
-// Application Init module.  
-////////////////////////////////////////////////////////////
-$().ready(function(){
-    alert('ar');
-});
