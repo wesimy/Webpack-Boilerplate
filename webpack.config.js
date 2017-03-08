@@ -12,8 +12,8 @@ var enConfig = {
         //   ar: ['./src/index.ar.js'],
     },
     output: {
-        path: __dirname + "/dist",
-        filename: "app.[name].js"
+        path: __dirname ,
+        filename: "dist/js/app.[name].js"
     },
     module: {
         rules: [
@@ -42,11 +42,18 @@ var enConfig = {
                     }],
                     fallback: "style-loader"
                 }),
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loader: 'file-loader?name=dist/fonts/[name].[ext]'
             }]
     },
     // Use the plugin to specify the resulting filename (and add needed behavior to the compiler)
     plugins: [
-        new ExtractTextPlugin("app.[name].css"),
+        new ExtractTextPlugin({
+            publicPath: '../../',
+            filename:'dist/css/app.[name].css'
+        }),
     ]
 };
 
@@ -58,8 +65,8 @@ var arConfig = {
         ar: ['./src/index.ar.js'],
     },
     output: {
-        path: __dirname + "/dist",
-        filename: "app.[name].js"
+        path: __dirname ,
+        filename: "dist/js/app.[name].js"
     },
     module: {
         rules: [
@@ -88,11 +95,19 @@ var arConfig = {
                     }],
                     fallback: "style-loader"
                 }),
-            }]
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loader: 'file-loader?name=dist/fonts/[name].[ext]'
+            }
+            ]
     },
     // Use the plugin to specify the resulting filename (and add needed behavior to the compiler)
     plugins: [
-        new ExtractTextPlugin("app.[name].css"),
+        new ExtractTextPlugin({
+            publicPath: './',
+            filename:'dist/css/app.[name].css'
+        }),
     ]
 };
 

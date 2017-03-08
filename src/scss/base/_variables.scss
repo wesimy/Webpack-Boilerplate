@@ -7,7 +7,9 @@ $breakpoints: (
   xl: 1200px
 );
 
-
+/////////////////
+// Fonts
+////////////////
 $xl-font: (
   null  : 5px,
   xs : 16px,
@@ -15,3 +17,14 @@ $xl-font: (
   lg : 119px,
   xg : 119px
 );
+
+/////////////////
+// Colors
+////////////////
+$blue: #002d73;
+$silver: #f6f6f6;
+$lighgrey: #adafb1;
+$lightgrey: #dcdcdc;
+$grey: #5e5f61;
+$black: #333333;
+$white: #fff;
