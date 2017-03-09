@@ -3,6 +3,8 @@ let webpack = require('webpack');
 let path = require('path');
 let nodeModulesPath = path.join(__dirname, 'node_modules');
 let ExtractTextPlugin = require("extract-text-webpack-plugin");
+//let ex = require("./example/ex-loader");
+
 
 var enConfig = {
     context: __dirname,
@@ -12,12 +14,11 @@ var enConfig = {
         //   ar: ['./src/index.ar.js'],
     },
     output: {
-        path: __dirname ,
+        path: __dirname,
         filename: "dist/js/app.[name].js"
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 enforce: 'pre',
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -35,24 +36,36 @@ var enConfig = {
             {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
-                    use: [{
-                        loader: "css-loader"
-                    }, {
-                        loader: "sass-loader"
-                    }],
+                    use: [
+                        {
+                            loader: "css-loader"
+                        },
+                        {
+                            loader: "moataz-loader",
+                            query: {
+                                dir: 'ltr',
+                            }
+                        },
+                        
+                        {
+                            loader: "sass-loader"
+                        },
+                        
+                    ],
                     fallback: "style-loader"
                 }),
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2)$/,
                 loader: 'file-loader?name=dist/fonts/[name].[ext]'
-            }]
+            }
+        ]
     },
     // Use the plugin to specify the resulting filename (and add needed behavior to the compiler)
     plugins: [
         new ExtractTextPlugin({
             publicPath: '../../',
-            filename:'dist/css/app.[name].css'
+            filename: 'dist/css/app.[name].css'
         }),
     ]
 };
@@ -65,12 +78,11 @@ var arConfig = {
         ar: ['./src/index.ar.js'],
     },
     output: {
-        path: __dirname ,
+        path: __dirname,
         filename: "dist/js/app.[name].js"
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 enforce: 'pre',
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -88,11 +100,20 @@ var arConfig = {
             {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
-                    use: [{
+                    use: [
+                        {
                         loader: "rtlcss-loader"
-                    }, {
+                    },
+                    {
+                            loader: "moataz-loader",
+                            query: {
+                                dir: 'rtl',
+                            }
+                        },
+                    {
                         loader: "sass-loader"
-                    }],
+                    },
+                    ],
                     fallback: "style-loader"
                 }),
             },
@@ -100,13 +121,13 @@ var arConfig = {
                 test: /\.(eot|svg|ttf|woff|woff2)$/,
                 loader: 'file-loader?name=dist/fonts/[name].[ext]'
             }
-            ]
+        ]
     },
     // Use the plugin to specify the resulting filename (and add needed behavior to the compiler)
     plugins: [
         new ExtractTextPlugin({
             publicPath: './',
-            filename:'dist/css/app.[name].css'
+            filename: 'dist/css/app.[name].css'
         }),
     ]
 };
