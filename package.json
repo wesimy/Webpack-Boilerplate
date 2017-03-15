@@ -17,6 +17,7 @@
     "import-glob-loader": "^1.1.0",
     "jshint": "^2.9.4",
     "jshint-loader": "^0.8.4",
+    "loader-utils": "^1.0.4",
     "node-sass": "^4.5.0",
     "rtlbootstrap": "^4.0.0-alpha.7",
     "sass-loader": "^6.0.2",

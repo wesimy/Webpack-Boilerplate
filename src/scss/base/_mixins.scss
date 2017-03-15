@@ -1,8 +1,7 @@
  // Responsive Font-Size
-@mixin font-size($fs-map, $Ïfs-breakpoints: $breakpoints) {
-  @each $fs-breakpoint,
-  $fs-font-size in $fs-map {
-    @if $fs-breakpoint==null {
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
       font-size: $fs-font-size;
     }
     @else {

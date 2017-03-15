@@ -9175,18 +9175,18 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map *//**
- * Swiper 3.4.1
+ * Swiper 3.4.2
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * 
  * http://www.idangero.us/swiper/
  * 
- * Copyright 2016, Vladimir Kharlampidi
+ * Copyright 2017, Vladimir Kharlampidi
  * The iDangero.us
  * http://www.idangero.us/
  * 
  * Licensed under MIT
  * 
- * Released on: December 13, 2016
+ * Released on: March 10, 2017
  */
 .swiper-container {
   margin-left: auto;
@@ -9984,7 +9984,16 @@ body {
   width: 100%;
   height: 100%;
 font-family: 'Cairo', sans-serif;
-}
+  font-size: 34px; }
+  @media screen and (min-width: 0) {
+    body {
+      font-size: 34px; } }
+  @media screen and (min-width: 768px) {
+    body {
+      font-size: 40px; } }
+  @media screen and (min-width: 992px) {
+    body {
+      font-size: 40px; } }
 
 h1,
 h2,
@@ -9994,3 +10003,6 @@ h4 {
   color: #333333; }
 h1 {
   font-weight: bold; }
+
+.tile-01 h2 {
+  color: #002d73; }

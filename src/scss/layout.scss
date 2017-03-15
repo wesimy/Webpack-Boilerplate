@@ -13,7 +13,8 @@ body {
     height: 100%;
     -rtl-font-family: 'Cairo', sans-serif;
     -ltr-font-family: 'Open Sans', sans-serif;
-
+    //background: $white;
+    @include font-size($xxxl-font);
 }
 
 //////////////
