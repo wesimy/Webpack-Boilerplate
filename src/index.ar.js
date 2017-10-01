@@ -35,8 +35,8 @@ requireSCSS.keys().forEach(requireSCSS);
 var requireSCSS = require.context('./layout/', true, /\.scss$/);
 requireSCSS.keys().forEach(requireSCSS); 
 
-var requireSCSS = require.context('./widgets/', true, /\.scss$/);
-requireSCSS.keys().forEach(requireSCSS); 
+// var requireSCSS = require.context('./widgets/', true, /\.scss$/);
+// requireSCSS.keys().forEach(requireSCSS); 
 
 ////////////////// 
 // APP JS FILES
