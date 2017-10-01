@@ -112,6 +112,16 @@ for (let c of configs) {
             }
             ]
         },
+        resolve: {
+            alias: {
+                "TweenMax": path.resolve('node_modules', 'gsap/src/uncompressed/TweenMax.js'),
+                "TimelineMax": path.resolve('node_modules', 'gsap/src/uncompressed/TimelineMax.js'),
+                "ScrollMagic": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
+                "animation.gsap": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
+                "jquery.ScrollMagic": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/jquery.ScrollMagic.js'),
+                "Popper": path.resolve('node_modules', 'popper.js/dist/popper.min.js')
+            }
+        },
         // Use the plugin to specify the resulting filename (and add needed behavior to the compiler)
         plugins: [
             new ExtractTextPlugin({

@@ -1,0 +1,44 @@
+@import '../../base/index';
+.widget-speech{ 
+    .widget-header{
+        border: none;
+    }
+    .widget-content{
+        blockquote{
+            color: $black;
+            position: relative;
+            z-index: 1;
+            p{
+                @include font-size($lg-font);
+                font-weight: normal;
+                font-style: italic;
+                padding-right: 30px;
+                &:before, &:after{
+                    content:'"';
+                }
+            }
+            footer{
+                font-weight: bold;
+            }
+        }
+        img{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            height: 300px;
+            .padded &{
+                bottom: -50px;
+            }
+        }
+
+        footer{
+            border: none;
+            margin: 0;
+            color: $black;
+            padding: 0;
+        }
+
+    }
+    
+}

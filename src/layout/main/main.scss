@@ -1,0 +1,453 @@
+@import '../../base/index';
+
+html,
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscal;
+    height: 100%;
+    background-color: $slate;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: $font;
+}
+
+////////////
+// Extend Bootstrap Container
+///////////
+@media (min-width: map-get($breakpoints, xxl)) {
+    .container {
+        width: 1360px;
+        max-width: 100%;
+    }
+}
+
+//////////////
+// headers
+////////////
+h1{
+    font-weight: 500;
+}
+h2{
+    font-weight: 500;
+}
+
+//////////////
+// links
+////////////
+
+
+////////////
+// Page Canvas
+///////////
+.canv{
+    max-width: map-get($breakpoints, xxl); 
+    margin: 0 auto;
+    position: relative;
+    //overflow-x: hidden;
+    -webkit-box-shadow: 0px 0px 100px -25px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 50px -25px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 50px -25px rgba(0, 0, 0, 0.25);
+    background: $secondary;
+    
+
+    .pg-content{
+        padding-top: $header-height-sm;
+
+        @include desktop{
+            padding-top: $header-height-lg;
+        }
+        @include custom-width(#{map-get($breakpoints,lg)}, #{map-get($breakpoints,xl)}){
+			padding-top: $header-height-md;
+		}
+    }
+    
+}
+
+///////////
+// Badges
+//////////
+.badge{
+    border-radius: 0;
+    padding: 8px;
+    text-transform: uppercase;
+    font-weight: 800;
+    &.badge-brand{
+        background:$brand;
+    }
+    &.badge-primary{
+        background:$primary;
+    }
+    &.badge-primary-dark{
+        background:$primary;
+        color: $black;
+    }
+    &.badge-secondary{
+        background:$secondary;
+    }
+    &.badge-white{
+        background:$white;
+        color: $black;
+    }
+    .bg-primary &, .bg-brand &{
+        background: $white !important;
+        color: $black;
+    }
+    
+}
+
+a.link-more{
+    @include font-size($xs-font);
+    text-align-last: end;
+    font-weight: 800;
+    text-transform: uppercase;
+    &:after{
+        content: "\e902";
+        @include ifont();
+        @include font-size($xl-font);
+        vertical-align: middle;
+        color: $brand;
+    }
+    
+}
+
+button.btn{
+    background: none;
+    color: $brand;
+    border: 2px solid $brand;
+    border-radius: 100px;
+    font-weight: bold;
+    text-transform: uppercase;
+    @include font-size($xxs-font);
+    outline: none;
+    cursor: pointer;
+    position: relative;
+
+    &.has-icon{
+        padding-right: 40px;
+        i{
+            @include font-size($xl-font);
+            right: 5px;
+            @include vertical-align(absolute);
+        }
+    }
+    &[disabled], &.disabled{
+        background: $brand;
+        border-color: $brand;
+        color: $white;
+        opacity: 0.4;
+    }
+
+    &:hover, &:focus{
+	    color: $white;
+        background: $brand;
+        border-color: $brand;
+        box-shadow: none;
+        outline: none;
+    }
+
+    &.inverse{
+        color: $white;
+        border-color: $white;
+
+        &:hover, &:focus{
+            color: $brand;
+            background: $white;
+            border-color: $white;
+        }
+    }
+
+    .bg-primary &{
+        color: $white;
+        border-color: $white;
+
+        &:hover, &:focus{
+            color: $primary;
+            background: $white;
+            border-color: $white;
+        }
+
+    }
+    .bg-brand &{
+        color: $white;
+        border-color: $white;
+
+        &:hover, &:focus{
+            color: $brand;
+            background: $white;
+            border-color: $white;
+        }
+
+    }
+}
+
+.dropdown{
+    &.show{
+        button{
+            i{
+                @include transform(rotate(180deg));
+            }
+        }
+    }
+}
+.padded-top{
+    margin-top: 80px;
+}
+
+.success{
+    color: #32A81F;
+}
+.error{
+    color: #D53B3B;
+}
+
+input{
+    @include placeholder{
+        font-family: 'Apex New';
+        color: darken($grey, 25%);
+    }
+}
+.selectric-options-dropdown{
+    float: right;
+    text-align: left;
+    z-index: 3;
+    
+    .selectric{
+        background: none;
+        outline: none;
+        box-shadow: none;
+        border: 2px solid $brand;
+        border-radius: 100px;
+        padding-left: 15px;
+        height: 35px;
+        min-width: 130px;
+        .label{
+            @include font-size($xxs-font);
+            text-transform: uppercase;
+            color: $brand;
+            font-weight: bold;
+            height: 31px;
+            line-height: 31px;
+        }
+        .button{
+            background: none;
+            width: 35px;
+            height: 31px;
+            
+            &:after{
+                border: none;
+                content:"\E909";
+                @include ifont();
+                font-size: 35px;
+                color: $brand;
+                bottom: 35px;
+                right: 35px;
+          
+            }
+        }  
+        &:hover{
+            background: $brand;
+            .label{
+                color: $white;
+            }
+
+            .button{
+                background: $brand;
+                &:after{
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &.selectric-open{
+        .selectric{
+            border-radius: 0;
+            border-top-left-radius: 18px;
+            border-top-right-radius: 18px;
+            border-bottom: 1px solid rgba($white, 0.3);
+            background: $brand;
+            .label{
+                color: $white;
+            }
+
+            .button{
+                background: $brand;
+                
+                &:after{
+                    content:"\E90C";
+                    color: $white;
+                }
+            }
+        }
+
+    }
+    &.selectric-above{
+        .selectric-items {
+            top: unset;
+            bottom: unset;
+        }
+    } 
+    .selectric-items{
+        
+        background: $brand;
+        border-radius: 20px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        padding: 0 10px 15px 15px;
+        margin:0;
+        border:none;
+        @include shadow(0 6px 12px rgba(0, 0, 0, 0.175));
+        @include font-size($xxs-font);
+        ul{
+            li{
+                text-align: left;
+                border-bottom: 1px solid rgba($white, 0.3);
+                color: $white;
+                text-transform: uppercase;
+                word-wrap: break-word;
+                hyphens: auto;
+                &.highlighted{
+                    background: none;
+                }
+                &.last{
+                    border: none;
+                }
+                &:hover{
+                    background: darken($brand, 2%);
+
+                }
+            }
+        } 
+    }
+
+    .bg-brand &{
+        .selectric{
+           border-color: $white;
+            .label{
+                color: $white;
+            }
+            .button{
+                
+                
+                &:after{
+                    color: $white;
+                }
+            } 
+            &:hover{
+                background: $white;
+                .label{
+                    color: $brand;
+                }
+                .button{
+                    background: $white;
+                    &:after{
+                        color: $brand;
+                    }
+                } 
+            } 
+        }
+
+        &.selectric-open{
+            .selectric{
+              
+                border-bottom-color: rgba($brand, 0.3);
+                background: $white;
+                .label{
+                    color: $brand;
+                }
+
+                .button{
+                    background: $white;
+                    
+                    &:after{
+                      
+                        color: $brand;
+                    }
+                }
+            }
+
+        }
+
+        .selectric-items{
+            background: $white;
+            ul{
+                li{
+                
+                    border-color: rgba($brand, 0.3);
+                    color: $brand;
+                    &:hover{
+                        background: darken($white, 2%);
+
+                    }
+                }
+            } 
+        }
+    } 
+    .bg-primary &{
+        .selectric{
+           border-color: $white;
+            .label{
+                color: $white;
+            }
+            .button{
+                
+                
+                &:after{
+                    color: $white;
+                }
+            } 
+            &:hover{
+                background: $white;
+                .label{
+                    color: $primary;
+                }
+                .button{
+                    background: $white;
+                    &:after{
+                        color: $primary;
+                    }
+                } 
+            } 
+        }
+
+        &.selectric-open{
+            .selectric{
+              
+                border-bottom-color: rgba($primary, 0.3);
+                background: $white;
+                .label{
+                    color: $primary;
+                }
+
+                .button{
+                    background: $white;
+                    
+                    &:after{
+                      
+                        color: $primary;
+                    }
+                }
+            }
+
+        }
+
+        .selectric-items{
+            background: $white;
+            ul{
+                li{
+                
+                    border-color: rgba($primary, 0.3);
+                    color: $primary;
+                    &:hover{
+                        background: darken($white, 2%);
+
+                    }
+                }
+            } 
+        }
+    } 
+}

@@ -1,0 +1,572 @@
+@import '../../base/index';
+
+.navbar{
+	>.container{
+		max-width: 1500px;
+		width: 100%;
+		background: $white;
+	}
+	
+	.nav-content{
+		@include tablet-mobile{
+			position: absolute;
+		    width: 100%;
+		    z-index: 15;
+			top: $header-height-sm;
+			height:0;
+			@include transition(height .2s ease-in-out);
+			&.show{
+				height: 100vh;
+			}
+		}
+		
+	}
+	    
+	
+	.navbar-brand{
+		padding: 10px;
+		.title{
+			color: $brand;
+		    @include font-size($xxs-font);
+			font-weight: 800;
+			text-transform: uppercase;
+			padding-right: 1rem;
+			margin: 0 1rem;
+			border-right: 1px solid #c9d1db;
+			line-height: 32px;
+			flex:1;
+			text-align: right;
+
+			@include desktop{
+				line-height: 60px;
+				@include font-size($sm-font);
+			}
+
+			@include custom-width(#{map-get($breakpoints,lg)}, #{map-get($breakpoints,xl)}){
+				line-height: 40px;
+				@include font-size($xs-font);
+			}
+
+		}
+		img{
+			height: 32px;
+			@include desktop{
+				height: 50px;
+				margin-top: 5px; 
+			}
+			@include custom-width(#{map-get($breakpoints,lg)}, #{map-get($breakpoints,xl)}){
+				height: 40px;
+				margin-top: 0;
+			}
+		}
+	}
+	.navbar-nav{
+		width: 100%;
+		display: flex;
+		position: relative;
+
+		
+		.nav-item{
+			flex: 1;
+			.drodown-container{
+				position: fixed;
+			    width: 100%;
+			    left: 0;
+			}
+			.dropdown{
+				position: static;
+				.dropdown-toggle{
+					cursor: pointer;
+					text-transform: uppercase;
+		    		@include font-size($xs-font);
+					color: $black;
+					font-weight: 700;
+					outline: none;
+					margin: 0 auto;
+					display: block;
+					background: none;
+					border: none;
+
+					i{
+		    			@include font-size($lg-font);
+						vertical-align: middle;
+					}
+
+					&:after{
+						display: none;
+					}
+				}
+				.dropdown-menu{
+					top: $header-height-sm;
+					left:0;
+					right: 0;
+				    border-radius: 0;
+				    border: none;
+				    background: #dae3ee;
+					margin:0 auto;
+					max-width: 1500px;
+					width: 100%;
+				    @include desktop{
+						position: fixed;
+						top: $header-height-lg;
+					}
+					@include custom-width(#{map-get($breakpoints,lg)}, #{map-get($breakpoints,xl)}){
+						top: $header-height-md;
+					}
+
+					.back{
+						display: none;
+						a{
+							display: block;
+							padding: 15px 30px;
+							color: $brand;
+							text-decoration: none;
+							border-bottom: 1px solid $grey;
+							text-transform: uppercase;
+							font-weight: bold;
+							font-size: 14px;
+							cursor: pointer;
+							i{
+								font-size: 35px;
+								position: relative;
+								top: -2px;
+							}
+						}
+
+						
+						
+					}
+
+					.widget{
+						.widget-header{
+							h1{
+								font-weight: normal;
+							}
+						}
+					}
+					
+				}
+
+				&.show{
+					.dropdown-toggle{
+						color: $primary;
+					}
+
+					.dropdown-menu{
+						
+						
+						@include tablet-mobile{
+							position: fixed;
+							height: 100%;
+						}
+						.back{
+							display: none;
+							@include tablet-mobile{
+								display: block;
+							}
+						}
+					}
+
+				}
+			}
+
+			&.active{
+				.dropdown-toggle{
+					color: $primary;
+				}
+			}
+			
+		}
+	}
+
+	
+
+	
+	.navbar-toggler{
+		border-radius: 0;
+		border: none;
+		left: 0;
+
+		> button{
+			border: none;
+			width:$header-height-sm;
+			height:$header-height-sm;
+			vertical-align: middle;
+			background: none;
+			outline: none;
+			@include desktop{
+				width:$header-height-lg;
+				height:$header-height-lg;
+			}
+			@include custom-width(#{map-get($breakpoints,lg)}, #{map-get($breakpoints,xl)}){
+				width:$header-height-md;
+				height:$header-height-md;
+			}
+			&.menu{
+				background: $secondary;;
+				color: $brand;
+			}
+			&.profile{
+				background: $brand;
+
+				.content{
+					
+					width: calc(#{$header-height-sm} - 22px);
+					height: calc(#{$header-height-sm} - 22px);
+					margin: auto;
+					position: relative;
+					@include desktop{
+						width: calc(#{$header-height-lg} - 22px);
+						height: calc(#{$header-height-lg} - 22px);
+					}
+					@include custom-width(#{map-get($breakpoints,lg)}, #{map-get($breakpoints,xl)}){
+						width: calc(#{$header-height-md} - 22px);
+						height: calc(#{$header-height-md} - 22px);
+					}
+					
+
+					.user{
+						border-radius: 50%;
+						overflow: hidden;
+						img{
+							width: 100%;
+						}
+					}
+					
+				}
+
+			}
+		}
+	
+
+		.search{
+			@include transition(width .55s ease);
+			.content{
+				vertical-align: middle;
+				white-space: nowrap;
+				position: relative;
+				height:$header-height-sm;
+				background: $secondary;
+				z-index: 1;
+				@include desktop{
+					height:$header-height-lg;
+				}
+				@include custom-width(#{map-get($breakpoints,lg)}, #{map-get($breakpoints,xl)}){
+					height:$header-height-md;
+				}
+
+				.close{
+					display: none;
+					position: absolute;
+				    top: 0;
+				    right: $header-height-sm;
+		    		font-size: $header-height-sm;
+				    color: $brand;
+					opacity:1;
+					@include desktop{
+						font-size: calc(#{$header-height-lg} - 20px);
+						right: $header-height-lg;
+					}
+					@include custom-width(#{map-get($breakpoints,lg)}, #{map-get($breakpoints,xl)}){
+						font-size: calc(#{$header-height-md} - 10px);
+						right: $header-height-md;
+					}
+
+					i{
+						position: absolute;
+						top: 0;
+					}
+					
+				}
+
+				.icon{
+					position: absolute;
+					z-index: 1;
+					font-size: $header-height-sm;
+					width:$header-height-sm;
+					height:$header-height-sm;
+					background: $secondary;
+					cursor: pointer;
+					text-decoration: none;
+					@include desktop{
+						width:$header-height-lg;
+						height:$header-height-lg;
+						font-size: $header-height-lg;
+					}
+					@include custom-width(#{map-get($breakpoints,lg)}, #{map-get($breakpoints,xl)}){
+						width:$header-height-md;
+						height:$header-height-md;
+						font-size: $header-height-md;
+					}
+					i{
+						color: $black;
+						position: absolute;
+						top: 0;
+					}
+
+					
+				}
+
+				input#search{
+					width:$header-height-sm;
+					background: $secondary;
+					border: none;
+					@include font-size($xs-font);
+					line-height: 30px;
+					padding-top: 11px;
+					color: $black;
+					padding-left: $header-height-sm;
+					outline:none;
+
+
+					@include desktop{
+						width:$header-height-lg;
+						padding-left: $header-height-lg;
+						line-height: 45px;
+						@include font-size($sm-font);
+					}
+					@include custom-width(#{map-get($breakpoints,lg)}, #{map-get($breakpoints,xl)}){
+						width:$header-height-md;
+						padding-left: $header-height-md;
+						line-height: 40px;
+					}
+					
+
+					&::-webkit-input-placeholder {
+					   color: $light-text;
+					}
+					 
+					&:-moz-placeholder { /* Firefox 18- */
+					   color: $light-text;  
+					}
+					 
+					&::-moz-placeholder {  /* Firefox 19+ */
+					   color: $light-text;  
+					}
+					 
+					&:-ms-input-placeholder {  
+					   color: $light-text;  
+					}
+				}
+			}
+
+			&.open{
+				width: calc(100% - 80px);
+
+				@include custom-width(#{map-get($breakpoints,lg)}, #{map-get($breakpoints,xl)}){
+					width: calc(100% - 60px);
+				}
+
+				@include tablet-mobile{
+					width: calc(100% - 105px);
+				}
+
+				.icon{
+
+					i{
+						color: $brand;
+					}
+						
+				}
+					
+				input#search{
+					width: calc(100% - 45px);
+					margin-right: 20px;
+					outline:none;
+					border-bottom: 1px solid $brand;
+				}
+
+				.close{
+					display: block;
+				}
+
+			}		
+		}
+		
+	}
+
+	#navbarProfile{
+		background: darken( $brand, 8% );
+		@include desktop{
+			width: 500px;
+			position: absolute;
+			top: $header-height-lg;
+			left:0;
+			z-index: 2;
+		}
+		@include custom-width(#{map-get($breakpoints,lg)}, #{map-get($breakpoints,xl)}){
+			top: $header-height-md;
+		}
+
+		ul {
+			background: $brand;
+			
+			@include desktop{
+				display: block;
+			}
+
+		
+			li a{
+				color: $white;
+	    		text-transform: uppercase;
+	    		padding-left: 20px;
+	    		@include font-size($sm-font);
+	    		font-weight: bold;
+
+	    		@include desktop{
+					@include font-size($sm-font);
+	    			padding: 8px;
+	    		}
+
+	    		>div{
+	    			position: relative;
+	    			.notification{
+	    			    background: $white;
+					    width: 20px;
+					    height: 20px;
+					    right: 19px;
+					    color: $brand;
+					    text-align: center;
+					    line-height: 20px;
+						top: 11px;
+						@include tablet-mobile{
+							width: 17px;
+							height: 17px;
+							line-height: 17px;
+							right: 27px;
+						}
+		    		}
+
+		    		i{
+		    			@include font-size($xxxl-font);
+		    			vertical-align: middle;
+		    			margin-right: 20px;
+		    			@include desktop{
+		    				margin-right: 10px;
+		    			}
+
+		    		}
+	    		}
+
+	    	}
+
+		}
+		.summary{
+			background: darken( $brand, 8% );
+			padding-top:20px;
+			padding-bottom: 20px;
+			.row{
+				margin: 0;
+			}
+			P, label{
+		    	margin:0;
+		    	color: $white;
+		    }
+		    p{
+		    	@include font-size($xxs-font)
+
+		    }
+		    label{
+		    	font-weight: 800;
+		    	@include font-size($lg-font);
+		    }
+			.circle-progress{
+				position: relative;
+				.details{
+					padding: 15px 0;
+					@include vertical-align(absolute);
+				    width: 100%;
+				    
+				    
+				}
+			}
+			.info-container{
+			    height: 100%;
+			    @include tablet-mobile{
+			    	text-align: center;
+			    }
+
+			    label{
+			    	@include font-size($sm-font);
+			    }
+			    .info, button{
+					@include vertical-align();
+				}
+			}
+
+		}
+	}
+	#navbarLinks{
+		@include desktop{
+			margin-left: calc(#{$header-height-lg} * 2);
+		}
+		@include custom-width(#{map-get($breakpoints,lg)}, #{map-get($breakpoints,xl)}){
+			margin-left: calc(#{$header-height-md} * 2);
+
+			.dropdown{
+				.dropdown-toggle{
+					font-size: 12px;
+				}
+			}
+		}
+		@include tablet-mobile{
+		
+			background: $secondary;
+			.nav-item{
+				border-top: 1px solid $grey;
+				.dropdown{
+					.dropdown-toggle{
+						text-align: left;
+					    width: 100%;
+					    font-size: 14px;
+						padding: 20px;
+					    i{
+					    	
+					    	@include transform(rotate(270deg));
+							font-size: 26px;
+							float: right;
+					    }
+					}
+				}
+			
+			}	
+
+		}
+
+	}
+}
+
+.notification{
+	position: absolute;
+	top: -3px;
+	right: 0;
+	display: block;
+	border-radius: 50%;
+	width: 20px;
+    height: 20px;
+    background: $primary;
+    overflow: hidden;
+    font-size: 15px;
+    color: $white;
+    font-weight: bold;
+	line-height: 20px;
+	
+	@include tablet-mobile{
+		top:-5px;
+		right: -2px;
+		width: 15px;
+		height: 15px;
+		font-size: 12px;
+		line-height: 15px;
+	}
+	@include custom-width(#{map-get($breakpoints,lg)}, #{map-get($breakpoints,xl)}){
+		width: 17px;
+		height: 17px;
+		font-size: 13px;
+		line-height: 17px;
+		top:-6px;
+		right: -3px;
+	}
+
+
+}

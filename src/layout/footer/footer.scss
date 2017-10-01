@@ -1,0 +1,35 @@
+@import '../../base/index';
+
+footer{
+    padding: 20px 0;
+    border-top: 1px solid $grey;
+    color: $brand;
+    margin-top: 40px;
+
+    .container{
+        @include tablet-mobile{
+            width: 100%;
+        }
+    }
+
+    .info{
+       margin-right: 5px;
+       &:first-child{
+           &:after{
+               content:"|";
+               font-weight: 300;
+               margin-left: 5px;
+               color: $brand;
+           }
+
+       }
+       span{
+           font-weight: bold;
+       } 
+    }
+    button{
+        @include tablet-mobile{
+            float: right;
+        }
+    }
+}

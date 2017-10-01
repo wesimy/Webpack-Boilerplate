@@ -1,0 +1,119 @@
+@import '../../base/index';
+
+.widget-notifications-list{
+    .widget-header{
+        h1{
+            span{
+                @include font-size($lg-font);
+            }
+        }
+    }
+    .widget-content{
+        padding: 40px 0;
+        ul{
+            padding: 0;
+            list-style: none;
+            li{
+                margin-bottom: 3px;
+                background: $white;
+                
+                &.unseen{
+                    background: lighten($primary, 15%);
+                }
+                a{
+                    text-decoration: none;
+                    color: $black;
+                    padding: 5px 30px;
+                    border-left: 3px solid transparent;
+                    border-right: 3px solid transparent;
+                    &:hover{
+                        border-left-color: $brand;
+                    }
+                    .media-left{
+                        .img-container{
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            img{
+                                height: 100%;
+                            }
+                        }
+                        .icon-container{
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            background: $brand;
+                            i{
+                                font-size: 60px;
+                                color: $white;
+                            }
+                        }
+                    }
+
+                    
+
+                    .details{
+                        overflow: hidden;
+                        padding: 0 20px;
+                        .details-header{
+                            @include clearfix;
+                            .title{
+                                color: $brand;
+                                text-align: left;
+                                float: left;
+                                i{
+                                    @include font-size($xxl-font);
+
+                                }
+                                span{
+                                    @include font-size($xxs-font);
+                                    text-transform: uppercase;
+                                    font-weight: bold;
+                                    line-height: 40px;
+                                    vertical-align: middle;
+
+                                }
+                            }
+                            .info{
+                                float: right;
+                                text-align: right;
+                                @include font-size($xs-font);
+                                font-weight: bold;
+                                line-height: 40px;
+                                vertical-align: middle;
+                            }
+                        }
+
+                        
+                        p{
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            @include font-size($md-font);
+                            span{
+                                font-weight: bold;
+                            }
+                        }
+                    }
+
+                    .icon-container{
+                        i{
+                            @include font-size($xxl-font);
+                            color: $brand;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+
+    .widget-footer{
+        .btn-container{
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    }
+   
+}

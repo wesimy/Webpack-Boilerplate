@@ -1,0 +1,95 @@
+@import '../../base/index';
+.widget-promo-slider{
+    color: $white;
+    -webkit-background-size: cover;
+    -moz-background-size:  cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    &:after{
+        background: rgba(0,0,0,0.3);
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        content: "";
+    }
+    .widget-header{
+        padding-left: 15px;
+        padding-right: 15px;  
+        color: $white;
+        border-color: $white;
+        position: relative;
+        z-index: 1;
+
+        i{
+            color: $white;
+        }
+
+        .btn{
+            color: $white;
+            border-color: $white;
+    
+            &:hover, &:focus{
+                color: $primary;
+                background: $white;
+                border-color: $white;
+                &.has-dropdown i{
+                    color: $primary;
+                }
+            }
+        }
+    }
+    .widget-content{
+        
+        .swiper-slide{
+            .content{
+                padding-top: 50px;
+                h2{
+                    @include font-size($md-font);
+                    font-weight: bold;
+                    margin:0;
+                }
+                p{
+                    @include font-size($xs-font);
+                    margin: 0;
+                }
+            }
+        }
+        .swiper-button-next{
+            background-image: none;
+            color: $white;
+            vertical-align: middle;
+            top: 20px;            
+            right: 0;
+            width: 60px;
+            height: 60px;
+            @include font-size($xxxl-font);
+            @include ifont();
+            &:after{
+                content: "\e90b";
+            }
+        }
+
+        .swiper-button-prev{
+            background-image: none;
+            color: $white;
+            vertical-align: middle;
+            top: 20px;            
+            left: 0;
+            width: 60px;
+            height: 60px;
+            @include font-size($xxxl-font);
+            @include ifont();
+            &:before{
+                content: "\e90a";
+            }
+        }
+    }
+    
+
+    
+}

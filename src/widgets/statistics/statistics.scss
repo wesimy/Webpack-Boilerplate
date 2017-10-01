@@ -1,0 +1,156 @@
+@import '../../base/index';
+
+.widget-statistics{
+    .widget-header{
+        border-color: $grey;
+    }
+    .widget-content{
+        border-bottom: 1px solid $grey;
+        padding: 0;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        
+        .event-details{
+            text-align: left;
+            padding:30px;
+            
+            h3{
+                font-weight: 300;
+                @include font-size($md-font);
+                padding-bottom: 20px;
+            }
+            i{
+                @include font-size($xxl-font);
+                color: $brand;
+            }
+            span{
+                font-weight: bold;
+            }
+            .btn{
+                display: block;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+        }
+
+        .media{
+            padding: 20px;
+            @include tablet-mobile{
+                display: block;
+            }
+
+            .profile-picture{
+                .img-container{
+              
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin: 0 auto;
+                    text-align: center;
+                    
+                    img{
+                        height: 100%;
+                    }
+        
+            
+                }
+            }
+            
+            
+            .media-body{
+                padding-left: 20px;
+                padding-top: 10px;
+                @include tablet-mobile{
+                    text-align: center;
+                    padding-left: 0;
+                }
+                h2{
+                    @include font-size($sm-font);
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+                h3{
+                    @include font-size($xs-font);
+                }
+            }
+
+            
+        }
+        .heading{
+            padding: 30px;
+            border-bottom: 1px solid $grey;
+            text-align: center;
+            h3{
+                color: $brand;
+                @include font-size($md-font);
+                font-weight: bold;
+
+                span{
+                    background: $brand;
+                    color: $white;
+                    width: 25px;
+                    height: 25px;
+                    padding: 3px;
+                    font-size: 18px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    margin-right: 5px;
+              
+                }
+            }
+            p{
+                text-align: center;
+                font-weight: 300;
+                @include font-size($sm-font);
+
+                span{
+                    font-weight: bold;
+                }
+            }
+
+        }
+        .details{
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid $grey;
+            p{
+                text-align: left;
+            }
+
+            .selectric-options-dropdown{
+                float: none;
+                display: inline-block;
+            }
+        }
+        
+    }
+    .widget-footer{
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+
+       
+    
+           
+        .info{
+            height: 100%;
+            text-align: center;
+            width: 50%;
+            float: left;
+            &:not(:last-child){
+                border-right: 1px solid $grey;
+            }
+            @include font-size($md-font);
+            h3{
+                padding-top: 20px;
+                @include font-size($lg-font);
+            }
+            p{
+                font-weight: 300;
+                @include font-size($sm-font);
+            }
+        }  
+        
+    }
+    
+}

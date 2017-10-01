@@ -1,0 +1,15 @@
+ @import '../../base/index';
+ .widget-multi-level-menu{
+     .widget-header{
+        padding: 15px 40px;
+        h1{
+            font-weight: normal;
+            @include font-size($md-font);
+        }
+
+    }
+    .widget-content{
+        padding: 15px 40px;
+    }
+ }
+ 

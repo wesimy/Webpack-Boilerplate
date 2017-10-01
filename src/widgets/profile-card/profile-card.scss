@@ -1,0 +1,60 @@
+@import '../../base/index';
+.widget-profile-card{
+    .widget-content{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        .profile-picture{
+            padding: 0 20px;
+            .img-container{
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin: 0 auto;
+                img{
+                    height: 100%;
+                }
+
+            }
+        }
+        
+        .name{
+            color: $brand;
+            text-transform: uppercase;
+            @include font-size($md-font);
+            font-weight: bold;
+            margin: 0;
+        }
+        .data{
+            @include font-size($xs-font);
+            margin: 10px 0;
+        }
+        .heading{
+            font-weight: bold;
+        }
+        .info{
+            text-align: center;
+            margin-top: 30px;
+            &:not(:last-child){
+                border-right: 1px solid $grey;
+
+            }
+        }
+
+        .details{
+            height: 100%;
+            border-left: 1px solid $grey;
+            padding-left: 30px;
+            @include custom-width(0px, #{map-get($breakpoints,xl) - 1}){
+                border: none;
+                padding: 0;
+                margin-top: 30px;
+            }
+            h2{
+                @include font-size($md-font);
+                font-weight: bold;
+            }
+        }
+    }
+
+}
