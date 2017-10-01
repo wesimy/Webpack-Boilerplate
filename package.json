@@ -36,17 +36,12 @@
     "webpack-rtl-plugin": "^1.6.0"
   },
   "dependencies": {
-<<<<<<< HEAD
     "bootstrap": "4.0.0-alpha.6",
     "gsap": "^1.20.2",
     "jquery": "^3.2.1",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
     "popper.js": "^1.12.3",
     "scrollmagic": "^2.0.5",
-=======
-    "bootstrap": "^4.0.0-alpha.6",
-    "jquery": "^3.2.1",
->>>>>>> bd7c519229e6deeb2a753901e8fe949768c8556d
     "selectric": "^1.11.1",
     "swiper": "^3.4.2",
     "tether": "^1.4.0",

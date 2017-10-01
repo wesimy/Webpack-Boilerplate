@@ -1,8 +1,4 @@
 {
   "port": 8000,
-<<<<<<< HEAD
   "startPath": "html/en/index.html"
-=======
-  "startPath": "/html/en/index.html"
->>>>>>> bd7c519229e6deeb2a753901e8fe949768c8556d
 }
