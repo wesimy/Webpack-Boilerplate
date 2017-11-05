@@ -1,0 +1,75 @@
+@import '../../base/index';
+
+[class^="place-holder"], [class*=" place-holder"] {
+    .container-fluid{
+    //    padding: 0;
+    }
+    .container{
+        @include tablet-mobile{
+            width: 100%;
+        }
+    }
+
+    &.bg-brand{
+        background-color: $brand;
+        .widget{
+            color:$white;
+
+            .header{
+                border-color: $white ;
+             
+        
+                h1{
+               
+                }
+        
+                a{
+                  
+                    
+                    i{
+                    
+                        color:$white;
+                    }
+                }
+            }
+
+
+        }
+    }
+    &.bg-primary{
+        background-color: $primary !important;
+    }
+    &.bg-secondary{
+        background-color: $secondary;
+    }
+    &.bg-grey{
+        background-color: $grey;
+    }
+
+    .half-vertical{
+        height: calc(50% - 15px);
+        min-height: 200px;
+        &:first-child{
+            margin-bottom: 30px; 
+        }
+        &:last-child{
+            margin-top: 30px; 
+        }
+        
+    }
+
+    &.padded{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    &.spaced{
+        > .row > [class^="col"]{
+            padding: 1px;
+        }
+    }
+
+
+   
+}
+

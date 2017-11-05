@@ -1,4 +1,4 @@
 {
   "port": 8000,
-  "startPath": "/html/en/index.html"
+  "startPath": "html/en/index.html"
 }

@@ -1,0 +1,137 @@
+@import '../../base/index';
+
+.widget-search-results{
+    .widget-header{
+        h1{
+            font-weight: normal;
+            text-transform: none;
+            line-height: 30px;
+            padding: 20px 0;
+            @include font-size($md-font);
+            span{
+                @include font-size($lg-font);
+                text-transform: none;
+            }
+        }
+    }
+    .widget-content{
+        padding: 40px 0;
+        ul{
+            padding: 0;
+            list-style: none;
+            li{
+                margin-bottom: 20px;
+                background: $white;
+                
+                &.unseen{
+                    background: lighten($primary, 15%);
+                }
+                a{
+                    text-decoration: none;
+                    color: $black;
+                    padding: 5px 30px;
+                    border-left: 3px solid transparent;
+                    border-right: 3px solid transparent;
+                    &:hover{
+                        border-left-color: $brand;
+                    }
+                    .media-left{
+                        .img-container{
+                            width: 100px;
+                            height: 100px;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            img{
+                                height: 100%;
+                            }
+                            @include tablet-mobile{
+                                width: 60px;
+                                height: 60px;
+                            }
+                        }
+                        .icon-container{
+                            width: 100px;
+                            height: 100px;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            background: $brand;
+                            i{
+                                font-size: 100px;
+                                color: $white;
+                            }
+                            @include tablet-mobile{
+                                width: 60px;
+                                height: 60px;
+                                i{
+                                    font-size: 60px;
+                                }
+
+                            }
+                        }
+                    }
+
+                    
+
+                    .details{
+                        overflow: hidden;
+                        padding: 0 20px;
+                        .details-header{
+                            @include clearfix;
+                            .title{
+                                color: $brand;
+                                text-align: left;
+                                float: left;
+                                i{
+                                    @include font-size($xxl-font);
+
+                                }
+                                span{
+                                    @include font-size($xxs-font);
+                                    text-transform: uppercase;
+                                    font-weight: bold;
+                                    line-height: 40px;
+                                    vertical-align: middle;
+                                }
+                            }
+                        }
+                        h2{
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            font-weight: bold;
+                            margin-bottom: 5px;
+                            @include font-size($md-font);
+                        }
+                        p{
+                            font-weight: 300;
+                            margin: 0;
+                            @include font-size($lg-font);
+                            margin-bottom: 10px;
+                        }
+                        h3{
+                            font-weight: bold;
+                            height: 20%;
+                            margin-bottom: 20px;
+                            @include font-size($sm-font);
+                        }
+                    }
+
+                    .icon-container{
+                        i{
+                            @include font-size($xxl-font);
+                            color: $brand;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+
+    .widget-footer{
+        .btn-container{
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    }
+   
+}

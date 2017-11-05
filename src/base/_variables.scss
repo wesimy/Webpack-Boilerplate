@@ -1,0 +1,93 @@
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1500px
+);
+
+/////////////////
+// Fonts
+////////////////
+$xxxl-font: (
+  null  : 48px,
+  xs : 48px,
+  md : 54px,
+  lg : 60px,
+  
+);
+$xxl-font: (
+  null  : 32px,
+  xs : 32px,
+  md : 36px,
+  lg : 40px,
+  
+);
+$xl-font: (
+  null  : 28px,
+  xs : 28px,
+  md : 32px,
+  lg : 36px
+);
+$lg-font: (
+  null  : 20px,
+  xs : 20px,
+  md : 22px,
+  lg : 24px,
+  
+);
+$md-font: (
+  null  : 14px,
+  xs : 14px,
+  md : 16px,
+  lg : 18px,
+  
+);
+$sm-font: (
+  null  : 12px,
+  xs : 12px,
+  md : 14px,
+  lg : 16px,
+  
+);
+$xs-font: (
+  null  : 12px,
+  xs : 12px,
+  md : 13px,
+  lg : 14px,
+  
+);
+
+$xxs-font: (
+  null  : 10px,
+  xs : 10px,
+  md : 11px,
+  lg : 12px,
+  
+);
+
+
+$xxxs-font: (
+  null  : 8px,
+  xs : 8px,
+  md : 9px,
+  lg : 10px,
+  
+);
+
+/////////////////
+// Colors
+////////////////
+$brand: #182f7c;
+$primary: #1841ab;
+$secondary: #fdb813 ;
+$white: #fff;
+$silver: #ececec;
+$grey: #d4d4d4;
+$black: #333333;
+$error: red;
+$success: green;
+$warning: yellow; 
+

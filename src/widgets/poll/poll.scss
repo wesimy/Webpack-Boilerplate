@@ -1,0 +1,129 @@
+@import '../../base/index';
+
+.widget-poll{
+    .widget-header{
+        padding: 0px;
+    }
+    .widget-content{
+        padding: 30px;
+        h2{
+            @include font-size($md-font);
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        .form-check{
+            input{
+                margin-right: 10px;
+            }
+
+            label{
+                @include font-size($xs-font);
+                margin-bottom: 5px;
+                
+            }
+        }
+        .button-container{
+            text-align: right;
+        }
+        .progress-poll{
+            padding-bottom: 10px;
+            .winning-poll{
+                color: $primary;
+            }
+            label{
+                @include font-size($xs-font);
+                margin-bottom: 5px;
+                font-weight: bold;
+                float: left;
+                line-height: 35px;
+            }
+            .number{
+                @include font-size($lg-font);
+                float: right;
+            }
+            .progress{
+                border-radius: 10px;
+                border: solid 2px white;
+                .progress-bar{
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+}
+
+.widget-card-slider{
+    padding-bottom: 30px;
+    .widget-header{
+        padding: 15px 40px;
+        h1{
+            @include font-size($md-font);
+        }
+
+    }
+    .widget-content{
+        padding: 15px 40px;
+        .swiper-slide{
+            padding: 30px;
+
+            img{
+                max-width: 100%;
+            }
+
+        }
+        
+        .swiper-button-next{
+            background-image: none;
+            color: $black;
+            vertical-align: middle;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            @include font-size($xxxl-font);
+            @include ifont();
+            &:after{
+                content: "\e90b";
+                border-left: 1px solid $grey;
+            }
+        }
+
+        .swiper-button-prev{
+            background-image: none;
+            color: $black;
+            vertical-align: middle;
+            left: 0;
+            width: 60px;
+            height: 60px;
+            @include font-size($xxxl-font);
+            @include ifont();
+            &:before{
+                content: "\e90a";
+                border-right: 1px solid $grey;
+            }
+        }
+
+        .swiper-pagination{
+            bottom:-20px;
+            width: 100%;
+
+            .swiper-pagination-bullet{
+                width: 5px;
+                height: 5px;
+                margin: 10px;
+                background: $primary;
+                opacity: 1;
+                vertical-align: middle;
+
+                &.swiper-pagination-bullet-active{
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+
+            
+        }
+    }
+    
+    
+    
+}

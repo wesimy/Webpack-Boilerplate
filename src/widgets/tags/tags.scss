@@ -1,0 +1,32 @@
+@import '../../base/index';
+
+.widget-tags{
+    .widget-header{
+        padding: 0;
+        border: none;
+    }
+    .widget-content{
+        .tag{
+            background: white;
+            padding: 2px 10px;
+            vertical-align: middle;
+            text-decoration: none;
+            border-radius: 100px;
+            border: 1px solid $brand;
+            color: $brand;
+            white-space: nowrap;
+            display: inline-block;
+            margin-right: 6px;
+            margin-bottom: 6px;
+            @include font-size($xxs-font);
+            cursor: pointer;
+
+            &:hover{
+                background: $brand;
+                color: $white;
+            }
+        }
+    }
+    
+    
+}

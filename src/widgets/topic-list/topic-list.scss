@@ -1,0 +1,87 @@
+@import '../../base/index';
+.widget-topic-list{ 
+    .widget-header{
+        padding: 10px 0;
+        .widget-options{
+            text-align: right;
+            padding-bottom: 10px;
+            i{
+                @include font-size($lg-font);
+            }
+        }
+    }
+    .widget-content{
+        .tile-headline{
+            padding: 10px 20px;
+            margin: 20px auto;
+            background: $secondary;
+            &:hover{
+                background: darken($secondary, 3%);
+            }
+            h2{
+                @include font-size($lg-font);
+                font-weight: 400;
+                margin-top: 20px;
+            }
+            a{
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+        .details{
+            margin-bottom: 30px; 
+            margin-top: 15px;
+            .reply-badge{
+                @include font-size($sm-font);
+                font-weight: bold;
+                .reply-status{
+                    color: $brand;
+                }
+            }
+            .list-icons{
+                li{
+                    @include font-size($md-font);
+                } 
+            }
+            .topic-detail{
+                text-transform: uppercase;
+                color: $brand;
+                font-weight: bold;
+                @include font-size($xs-font);
+                i{
+                    @include font-size($xl-font);
+                    margin: 15px;
+                }
+            }
+        }
+        .button{
+            text-align: center;
+            padding: 20px 0px 40px;
+        }
+    }
+}
+
+.create-topic{
+    color: $white;
+    padding: 5px;
+    .widget-header{
+
+    }
+    .widget-content{
+        padding: 20px;
+        .button{
+            text-align: center;
+            i{
+                @include font-size($lg-font);
+            }
+        }
+    }
+}
+
+.bg-primary{
+    background-color: $primary;
+}
+
+.bg-secondary{
+    background-color: $secondary;
+}

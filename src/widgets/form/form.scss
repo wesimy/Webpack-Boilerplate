@@ -1,0 +1,352 @@
+@import '../../base/index';
+
+.widget-form{
+    .widget-content{
+        padding-top: 30px;
+        .form-group{
+            position: relative;
+            >input, select, textarea, .selectize-input{
+                background: $secondary;
+                border-radius: 0;
+                border-color: #eeeeee;
+                padding: 15px 20px;
+                @include font-size($xs-font);
+                min-height: 50px;
+                outline: none;
+                box-shadow: none;
+                font-family: 'Apex New';
+                color: $black;
+                @include placeholder{
+                    color: darken($grey, 25%);
+                }
+                
+            }
+            &.has-datepicker{
+                &:before{
+                    content:"\e910";
+                    @include ifont();
+                    color: $brand;
+                    font-size: 50px;
+                    position: absolute;
+                    padding-left: 8px;
+                }
+
+                input{
+                    padding-left: 58px;
+                }
+            }
+            .datepicker{
+                width: 100%;
+                border-radius: 0;
+                margin-top: 0;
+                padding: 20px;
+                border-color: #eeeeee;
+                @include shadow(0 6px 12px rgba(0, 0, 0, 0.175));
+                &:after, &:before{
+                    background: none;
+                    border: none;
+                }
+                table{
+                    width: 100%;
+                    th{
+                        &.datepicker-switch{
+                            cursor: default;
+                            color: $brand;
+                            &:hover{
+                                background: none;
+                            }
+                        }
+                        &.dow{
+                            color: darken($grey, 40%);
+                        }
+                        
+                        &.prev, &.next{
+                            i{
+                                color: $brand;
+                                @include font-size($xl-font);
+                            }
+                            
+
+                        }
+                    }
+                    .day{
+                        color: darken($grey, 25%);
+                        &.old{
+                            color: $grey;
+                        }
+                        &.active{
+                            background: darken($grey, 40%);
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            .tag-input{
+             
+                .selectize-input{
+                    >div{
+                        background: white;
+                        padding: 2px 10px;
+                        vertical-align: middle;
+                        text-decoration: none;
+                        border-radius: 100px;
+                        border: 1px solid $brand;
+                        color: $brand;
+                        white-space: nowrap;
+                        display: inline-block;
+                        margin-right: 6px;
+                        margin-bottom: 6px;
+                        margin-top: 6px;
+                        @include font-size($xxs-font);
+            
+                        &:hover{
+                            background: $brand;
+                            color: $white;
+                        }
+                    }
+             
+                }
+                
+            }
+            
+            .select-wrapper{
+                &:after{
+                    content: "\E909";
+                    font-size: 40px;
+                    color: darken($grey, 25%);
+                    display: inline-block;
+                    position: absolute;
+                    right: 20px;
+                    top: 8px;
+                    pointer-events: none;
+                    @include ifont();
+                }
+                select {
+                    width: 100%;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    // background: url(#) 96% / 15% no-repeat #eee;
+                }
+            }
+            .selectric-wrapper{
+                .selectric{
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    background: $secondary;
+                    border-color: #eeeeee;
+                    
+                    .label{
+                        color: $black;
+                        margin-left: 20px;
+                        margin-right: 48px;
+                        @include font-size($xs-font);
+                    }
+                    .button{
+                        height: 48px;
+                        width: 48px;
+                        background: $secondary;
+                        &:after{
+                         
+                            border: none;
+                            content:"\E909";
+                            @include ifont();
+                            font-size: 40px;
+                            color: darken($grey, 25%);
+                            bottom: 38px;
+                            right: 38px;
+                        }
+                    }
+
+                    
+                }
+                .selectric-items{
+                    background: $secondary;
+                    border-color: #eeeeee;
+                    @include shadow(0 6px 12px rgba(0, 0, 0, 0.175));
+                    ul{
+                        li{
+                            &:hover, &.highlighted{
+                                background: $white;
+                            }
+                        }
+                    }
+                }
+                &.selectric-open{
+                    .selectric{
+                        .button{
+                            &:after{
+                                content:"\E90C";
+                            }
+                        }
+                    }
+            
+                }
+                
+            }
+
+            
+            
+            /* CAUTION: IE hackery ahead */
+            select::-ms-expand { 
+                display: none; /* remove default arrow in IE 10 and 11 */
+            }
+            
+            /* target Internet Explorer 9 to undo the custom arrow */
+            @media screen and (min-width:0\0) {
+                select {
+                    background:none\9;
+                    padding: 5px\9;
+                }
+            }
+            .uploader{
+                width: 100%;
+                height: 50px;
+                border: 1px dashed lighten($grey,2%);
+                background: $secondary;
+               
+                p{
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    color: darken($grey, 15%);
+                    line-height: 50px;
+                    font-weight: normal;
+                    @include font-size($xs-font);
+                    &.has-value{
+                        display: none;
+                        color: $black;
+                        i{
+                            z-index: 3;
+                            position: relative;
+                            cursor: pointer;
+                        }
+                    }
+                    i{
+                        @include font-size($xl-font);
+                        color: darken($grey, 50%);
+                    }
+                    
+                }
+                input{
+                    position: absolute;
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    height: 100%;
+                    outline: none;
+                    opacity: 0;
+                }
+                
+                  
+            }
+            .note-editor{
+                border-radius: 0;
+                border-color: #eee;
+                .note-placeholder{
+                    color: darken($grey, 25%);
+                    @include font-size($xs-font);
+                }
+                .note-editing-area{
+                    padding: 0 13px;
+                    background: $secondary;
+                    p{
+                        margin: 0;
+                    }
+                }
+                .note-editable{
+                    background: $secondary;
+                }
+                .note-toolbar, .note-resizebar{
+                    background:rgba(209, 214, 224, 0.56);
+                    border-color: #eee;
+                    text-align: right;
+                    border-radius: 0;
+                }
+             
+                .btn-group{
+                    
+                    button{
+                        border: none;
+                        &:hover, &:active, &:focus{
+                            background: none;
+                            color: darken($grey, 50%);
+                        }
+                    }
+                }
+            
+            }
+            
+            a{
+                cursor: pointer;
+                line-height: 40px;
+                text-align: right;
+                float: right;
+                
+                &.delete{
+                    color: $error;
+                }
+                &.add{
+                    color: $brand;
+                }
+                i{
+                    font-size: 40px;
+                }
+            }
+        }
+        
+        
+        small{
+            display: block;
+            color: darken($grey, 5%);
+            font-style: italic;
+            &:first-of-type{
+                margin-top: 10px;
+            }
+            span{
+                font-weight: bold;
+            }
+        }
+
+        .link-group, .template{
+            @include mobile{
+                border: 1px solid #eeeeee;
+                margin-bottom: 20px;
+                padding: 20px;
+                background: lighten($grey, 15%);
+            }
+        }
+        .link-group{
+            .add{
+                display: none;
+            }
+            .delete{
+                display: block;
+            }
+        }
+        .template{
+            .add{
+                display: block;
+            }
+            .delete{
+                display: none;
+            }
+        }
+
+
+    }
+    .widget-footer{
+        text-align: right;
+        padding-bottom: 50px;
+        padding-top: 30px;
+        a{
+            color: $brand;
+            text-transform: uppercase; 
+            text-decoration: underline;
+            font-weight: bold;
+            @include font-size($xs-font);
+            padding-right: 20px;           
+        }
+    }
+
+}

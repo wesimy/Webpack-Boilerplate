@@ -1,0 +1,242 @@
+@import '../../base/index';
+.widget-calendar{
+    position: relative;
+    .widget-content{
+        padding-top: 20px;
+        padding-bottom:20px;
+        .widget-card-list{
+            background: rgba($brand, 0.95);
+            height: 100%;
+
+            .widget-options{
+                cursor: pointer;
+            }
+            .tile-headline{
+                h2{
+                    font-weight: 800;
+                }
+                .info span{
+                    white-space: normal;
+                }
+            } 
+
+            
+            .swiper-button-next,
+            .swiper-button-prev {
+    
+                position: relative;
+                top: auto;
+                width: 40px;
+                height: auto;
+                margin-top: 0;
+                line-height: 1;
+                display: inline-block;
+                background-image: none;
+                @include font-size($xxxl-font);
+                color: $white;
+                &:before {
+                    @include ifont();
+                }
+            }
+            .swiper-button-prev {
+                &:before {
+                    content: "\e906";
+                }
+            }
+            .swiper-button-next {
+                float: right;
+                &:before {
+                    content: "\e907";
+                }
+            }
+          
+        }
+        .calendar {
+            .c-header {
+                display: block;
+                width: 100%;
+                margin-bottom: 15px;
+                .c-grid-title {
+                    float: left;
+                }
+                .c-next {
+                    width: 12.5%;
+                    height: 12%;
+                    text-align: right;
+                    cursor: pointer;
+                    //opacity: 0.5;
+                    &:after {
+                        color: $brand;
+                        @include ifont;
+                        @include font-size($xxl-font);
+                        content: "\E90B";
+                        
+                    }
+                }
+                .c-previous {
+                    width: 12.5%;
+                    height: 12%;
+                    text-align: left;
+                    cursor: pointer;
+                    //opacity: 0.5;
+                    &:after {
+                        color: $brand;
+                        @include ifont;
+                        @include font-size($xxl-font);
+                        content:"\E90A";
+                    }
+                }
+                .c-month {
+                    width: 75%;
+                    height: 12%;
+                    text-align: center;
+                    color: $brand;
+                    font-weight: normal;
+                    text-transform: uppercase;
+                    @include font-size($sm-font);
+                    line-height: 40px;
+                }
+            }
+            .c-grid {
+                float: left;
+                width: 100%;
+                min-height: 320px;
+                .c-day {
+                    width: 14.28%;
+                    margin: 5px auto;
+                    float: left;
+                    text-align: center;
+                    font-weight: bold;
+                    line-height: 20px;
+                    .c-day-wrp {
+                        border-radius: 100%;
+                        width: auto;
+                        max-width: 40px;
+                        margin: 0 auto;
+                        padding: 10px 0;
+                        max-height: 40px;
+                    }
+                }
+                .c-day-previous-month {
+                    width: 14.28%;
+                    height: 13%;
+                    float: left;
+                    text-align: center;
+                    opacity: 0;
+                }
+                .c-day-next-month {
+                    width: 14.28%;
+                    height: 13%;
+                    float: left;
+                    text-align: center;
+                    opacity: 0;
+                }
+                .c-week-day {
+                    width: 14.28%;
+                    float: left;
+                    text-align: center;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: $brand;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                }
+                .c-today {
+                    .c-day-wrp {
+                        background-color: $primary;
+                        color: $white;
+                        font-weight: bold;
+                    }
+                }
+                .c-event {
+                    cursor: pointer;
+                    .c-day-wrp {
+                        position: relative;
+                        &:after {
+                            content:"";
+                            display:block;
+                            position: absolute;
+                            bottom: 3px;
+                            background: $primary;
+                            width: 6px;
+                            height: 6px;
+                            border-radius: 50%;
+                            left: calc(50% - 3px);
+                        }
+                        &:hover{
+
+                            &:after{
+                                background: $brand;
+                            }
+
+
+                        }
+                    }
+                    &.c-today{
+                        .c-day-wrp {
+                            &:after {
+                                background: $white;
+                            }
+                        }
+                        &:hover{
+                            .c-day-wrp {
+                                background: $brand;
+                            }
+
+
+                        }
+                    }
+                }
+            }
+            .c-event-grid {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left:0;
+                right:0;
+                top:0;
+                bottom:0;
+                width: 100%;
+                display: none;
+
+                .c-event-body{
+                    height: 100%;
+                }
+                
+            }
+            
+        }
+    }
+}
+
+
+.popover{
+    background: rgba($brand,0.95);
+    border:none;
+    padding: 10px 15px;
+    @include tablet-mobile{
+        display: none;
+    }
+    
+    
+    &.bs-tether-element-attached-right::after, &.popover-left::after{
+        border-left-color: rgba($brand,0.95);
+    }
+    h5{
+        color: $white;
+        font-weight: 800;
+        @include font-size($md-font);
+
+        &:not(:only-child){
+            @include font-size($xs-font);
+            margin: 10px 0;
+           
+            &:not(:last-child){
+                border-bottom: 1px solid $white; 
+                padding-bottom: 10px;
+            }
+            
+        }   
+    }
+    
+}
