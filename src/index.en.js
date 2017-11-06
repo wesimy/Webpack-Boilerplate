@@ -17,6 +17,7 @@ require('expose-loader?window.Tether!tether');
 require('bootstrap');
 require('swiper'); 
 require('selectric');
+require('font-awesome');
 
 require('../node_modules/waypoints/lib/jquery.waypoints');
 require('TweenMax');
