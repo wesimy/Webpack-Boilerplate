@@ -1,1 +1,23 @@
 @import '../../base/index';
+.navbar{
+    color: $white;
+    .nav{
+        .row{
+            text-align: center;
+            text-transform: uppercase;
+            width: 100%;
+            a{
+                &.navbar-brand{
+                    @include font-size($lg-font);
+                    font-weight: 600;
+                }
+                &.nav-link{
+                    color: $white;
+                    @include font-size($xs-font);
+                    line-height: 2.5;
+                    
+                }
+            }
+        }
+    }
+}
