@@ -10252,40 +10252,201 @@ button.swiper-pagination-bullet {
 .icon-tag:before {
   content: "\E912"; }
 .bg-black {
-  background-color: #000000; }
-.header {
   background-color: #000000;
-  height: 100%; }
-  .header h1 {
-    color: #000000; }
-.navbar {
-  color: #ffffff; }
-  .navbar .nav .row {
-    text-align: center;
-    text-transform: uppercase;
-    width: 100%; }
-    .navbar .nav .row a.navbar-brand {
-      font-size: 20px;
-      font-weight: 600; }
+  color: white; }
+.header {
+  height: 500px;
+  position: relative; }
+  .header .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .header .container h1 {
+      color: #999999;
+      font-weight: 200;
+      text-transform: uppercase;
+      font-size: 32px; }
       @media screen and (min-width: 0) {
-        .navbar .nav .row a.navbar-brand {
-          font-size: 20px; } }
+        .header .container h1 {
+          font-size: 32px; } }
       @media screen and (min-width: 768px) {
-        .navbar .nav .row a.navbar-brand {
-          font-size: 22px; } }
+        .header .container h1 {
+          font-size: 36px; } }
       @media screen and (min-width: 992px) {
-        .navbar .nav .row a.navbar-brand {
-          font-size: 24px; } }
-    .navbar .nav .row a.nav-link {
-      color: #ffffff;
-      font-size: 12px;
-      line-height: 2.5; }
+        .header .container h1 {
+          font-size: 40px; } }
+      .header .container h1 span {
+        color: #fcac45;
+        font-weight: 600; }
+    .header .container p {
+      font-weight: 300;
+      font-size: 12px; }
       @media screen and (min-width: 0) {
-        .navbar .nav .row a.nav-link {
+        .header .container p {
           font-size: 12px; } }
       @media screen and (min-width: 768px) {
-        .navbar .nav .row a.nav-link {
+        .header .container p {
           font-size: 13px; } }
       @media screen and (min-width: 992px) {
-        .navbar .nav .row a.nav-link {
+        .header .container p {
           font-size: 14px; } }
+      .header .container p span {
+        font-weight: 600; }
+    .header .container i {
+      color: #ffffff; }
+  @media (max-width: 576px) {
+    .header .container {
+      padding: 0;
+      width: 300px; } }
+.about {
+  margin: 70px auto; }
+  .about img {
+    width: 75%; }
+    @media (max-width: 992px) {
+      .about img {
+        margin-bottom: 50px; } }
+  .about label {
+    text-transform: uppercase;
+    color: #6c6c6c;
+    font-size: 12px; }
+    @media screen and (min-width: 0) {
+      .about label {
+        font-size: 12px; } }
+    @media screen and (min-width: 768px) {
+      .about label {
+        font-size: 14px; } }
+    @media screen and (min-width: 992px) {
+      .about label {
+        font-size: 16px; } }
+  .about h2 {
+    font-weight: 300;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 28px; }
+    @media screen and (min-width: 0) {
+      .about h2 {
+        font-size: 28px; } }
+    @media screen and (min-width: 768px) {
+      .about h2 {
+        font-size: 32px; } }
+    @media screen and (min-width: 992px) {
+      .about h2 {
+        font-size: 36px; } }
+    .about h2 span {
+      font-weight: 600; }
+  .about p {
+    color: #6c6c6c;
+    margin-bottom: 30px;
+    font-size: 12px; }
+    @media screen and (min-width: 0) {
+      .about p {
+        font-size: 12px; } }
+    @media screen and (min-width: 768px) {
+      .about p {
+        font-size: 13px; } }
+    @media screen and (min-width: 992px) {
+      .about p {
+        font-size: 14px; } }
+  .about ul {
+    color: #6c6c6c;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    font-size: 12px; }
+    @media screen and (min-width: 0) {
+      .about ul {
+        font-size: 12px; } }
+    @media screen and (min-width: 768px) {
+      .about ul {
+        font-size: 13px; } }
+    @media screen and (min-width: 992px) {
+      .about ul {
+        font-size: 14px; } }
+    .about ul li {
+      font-weight: 600; }
+      .about ul li span {
+        font-style: italic;
+        font-weight: 300; }
+  .about button {
+    text-transform: uppercase;
+    color: #6c6c6c;
+    background-color: transparent;
+    border: 1px solid #999999;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 10px; }
+
+.team {
+  text-align: center;
+  padding: 70px 5px; }
+  .team h2 {
+    font-weight: 300;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 28px; }
+    @media screen and (min-width: 0) {
+      .team h2 {
+        font-size: 28px; } }
+    @media screen and (min-width: 768px) {
+      .team h2 {
+        font-size: 32px; } }
+    @media screen and (min-width: 992px) {
+      .team h2 {
+        font-size: 36px; } }
+    .team h2 span {
+      font-weight: 600; }
+  .team h3 {
+    font-size: 20px;
+    line-height: 1;
+    margin-bottom: 0;
+    margin-top: 20px; }
+    @media screen and (min-width: 0) {
+      .team h3 {
+        font-size: 20px; } }
+    @media screen and (min-width: 768px) {
+      .team h3 {
+        font-size: 22px; } }
+    @media screen and (min-width: 992px) {
+      .team h3 {
+        font-size: 24px; } }
+  .team label {
+    font-weight: 300;
+    margin-bottom: 20px;
+    font-size: 12px; }
+    @media screen and (min-width: 0) {
+      .team label {
+        font-size: 12px; } }
+    @media screen and (min-width: 768px) {
+      .team label {
+        font-size: 14px; } }
+    @media screen and (min-width: 992px) {
+      .team label {
+        font-size: 16px; } }
+  .team p {
+    font-weight: 300;
+    font-size: 12px; }
+    @media screen and (min-width: 0) {
+      .team p {
+        font-size: 12px; } }
+    @media screen and (min-width: 768px) {
+      .team p {
+        font-size: 13px; } }
+    @media screen and (min-width: 992px) {
+      .team p {
+        font-size: 14px; } }
+  .team .services {
+    margin-top: 50px; }
+    .team .services img {
+      border: 4px solid #fcac45;
+      border-radius: 50%;
+      padding: 20px; }
+    .team .services h3 {
+      margin-bottom: 10px;
+      text-transform: uppercase; }
+.navbar .container button {
+  color: #ffffff; }
+
+@media (max-width: 576px) {
+  .navbar .container {
+    margin: auto 0; } }
