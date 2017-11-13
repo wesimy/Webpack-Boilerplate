@@ -68,8 +68,9 @@
 .team {
     text-align: center;
     padding: 70px 5px;
+
     h2 {
-        font-weight: 300;
+        font-weight: 200;
         margin-bottom: 50px;
         text-transform: uppercase;
         text-align: center;
@@ -80,31 +81,131 @@
             font-weight: 600;
         }
     }
-    h3{
+
+    h3 {
         @include font-size($lg-font);
+
         line-height: 1;
         margin-bottom: 0;
         margin-top: 20px;
     }
-    label{
+
+    label {
         font-weight: 300;
         margin-bottom: 20px;
+
         @include font-size($sm-font);
     }
-    p{
+
+    p {
         font-weight: 300;
+
         @include font-size($xs-font);
     }
-    .services{
+
+    .services {
         margin-top: 50px;
-        img{
+
+        i {
             border: 4px solid $orange;
             border-radius: 50%;
             padding: 20px;
+
+            @include font-size($xl-font);
         }
-        h3{
+
+        h3 {
             margin-bottom: 10px;
             text-transform: uppercase;
         }
+    }
+
+    .work {
+        margin-top: 50px;
+
+        img {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        label{
+            color: $black;
+            font-weight: normal;
+        }
+
+        button{
+            border: none;
+            color: $darkgrey;
+            padding: auto 20px;
+            background-color: transparent;
+            border-right: 1px solid $darkgrey;
+            &:active{
+                color: $black;
+                box-shadow: none;
+            }
+            &:hover{
+                color: $black;
+                box-shadow: none;
+            }
+        }
+    }
+
+    &.testimonials{
+        h3{
+            text-transform: uppercase;
+            font-weight: 300;
+            @include font-size($xs-font);
+            line-height: 1.5;
+        }
+
+        p{
+            color: $grey;
+            margin-top: 30px;
+        }
+    }
+
+    form{
+        width: 100%;
+        label{
+            color: $darkgrey;
+            font-weight: 600;
+            margin-bottom: 5px;
+            margin-top: 25px;
+            @include font-size($xs-font);
+            span{
+                color: $red;
+            }
+        }
+        input{
+            border-radius: 2px;
+            border-color: $darkgrey;
+        }
+        textarea{
+            border-radius: 2px;
+            border-color: $darkgrey;
+        }
+        .btn-orange{
+            width: 15%;
+            color: $white;
+            margin-top: 20px;
+            border-radius: 2px;
+            background-color: $orange;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.footer{
+    padding: 20px;
+    color: $grey;
+    h3{
+        text-transform: uppercase;
+        @include font-size($xs-font);
+        span{
+            font-weight: 300;
+        }
+    }
+    i{
+
     }
 }

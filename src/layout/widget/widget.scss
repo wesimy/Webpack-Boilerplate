@@ -40,12 +40,7 @@
 
     .content{
        
-    }  
-
-    &.bordered{
-      //  border: 1px solid $secondary;
     }
-
 
     &.stretch{
         height: 100%
@@ -81,9 +76,6 @@
             padding-right: 30px;
             padding-left: 30px;
         }
-    }
-    &.bg-secondary{
-        background-color: $secondary;
     }
     &.bg-grey{
         background-color: $grey;

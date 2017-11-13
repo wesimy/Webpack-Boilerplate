@@ -37437,7 +37437,7 @@ webpackContext.id = 21;
 /* 22 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: ModuleBuildError: Module build failed: \n  /* Better Font Rendering =========== */\n                                        ^\n      Invalid CSS after \"... =========== */\": expected 1 selector or at-rule, was \"-webkit-font-smooth\"\n      in /Users/owaishmustafa/Projects/Webpack-Boilerplate/src/fonts/fonts.scss (line 153, column 42)\n    at runLoaders (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.<anonymous> (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/async/dist/async.js:2244:31)\n    at Object.callback (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/async/dist/async.js:906:16)\n    at options.error (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/node-sass/lib/index.js:294:32)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 23 */
@@ -37452,12 +37452,12 @@ throw new Error("Module build failed: ModuleBuildError: Module build failed: \n 
 var map = {
 	"./background/background.scss": 25,
 	"./header/header.scss": 26,
-	"./homepage/homepage.scss": 48,
-	"./main/main.scss": 27,
-	"./nav/nav.scss": 28,
-	"./placeholder/placeholder.scss": 29,
-	"./slider/slider.scss": 30,
-	"./widget/widget.scss": 31
+	"./homepage/homepage.scss": 27,
+	"./main/main.scss": 28,
+	"./nav/nav.scss": 29,
+	"./placeholder/placeholder.scss": 30,
+	"./slider/slider.scss": 31,
+	"./widget/widget.scss": 32
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -37491,7 +37491,7 @@ webpackContext.id = 24;
 /* 27 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: ModuleBuildError: Module build failed: \n    background: $secondary;\n               ^\n      Undefined variable: \"$secondary\".\n      in /Users/owaishmustafa/Projects/Webpack-Boilerplate/src/layout/main/main.scss (line 52, column 17)\n    at runLoaders (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.<anonymous> (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/async/dist/async.js:2244:31)\n    at Object.callback (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/async/dist/async.js:906:16)\n    at options.error (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/node-sass/lib/index.js:294:32)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 28 */
@@ -37503,7 +37503,7 @@ throw new Error("Module build failed: ModuleBuildError: Module build failed: \n 
 /* 29 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: ModuleBuildError: Module build failed: \n        background-color: $secondary;\n                         ^\n      Undefined variable: \"$secondary\".\n      in /Users/owaishmustafa/Projects/Webpack-Boilerplate/src/layout/placeholder/placeholder.scss (line 43, column 27)\n    at runLoaders (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.<anonymous> (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/async/dist/async.js:2244:31)\n    at Object.callback (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/async/dist/async.js:906:16)\n    at options.error (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/node-sass/lib/index.js:294:32)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 30 */
@@ -37515,26 +37515,10 @@ throw new Error("Module build failed: ModuleBuildError: Module build failed: \n 
 /* 31 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: ModuleBuildError: Module build failed: \n        background-color: $secondary;\n                         ^\n      Undefined variable: \"$secondary\".\n      in /Users/owaishmustafa/Projects/Webpack-Boilerplate/src/layout/widget/widget.scss (line 86, column 27)\n    at runLoaders (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.<anonymous> (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/async/dist/async.js:2244:31)\n    at Object.callback (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/async/dist/async.js:906:16)\n    at options.error (/Users/owaishmustafa/Projects/Webpack-Boilerplate/node_modules/node-sass/lib/index.js:294:32)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 32 */,
-/* 33 */,
-/* 34 */,
-/* 35 */,
-/* 36 */,
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */,
-/* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */
+/* 32 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
