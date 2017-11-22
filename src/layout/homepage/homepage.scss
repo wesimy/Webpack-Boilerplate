@@ -41,7 +41,7 @@
         color: $darkgrey;
         margin-bottom: 30px;
         padding-left: 15px;
-        list-style-image: url('/dist/images/bullet.png');
+        list-style-image: url("/dist/images/bullet.png");
 
         @include font-size($xs-font);
 
@@ -59,7 +59,7 @@
         text-transform: uppercase;
         color: $darkgrey;
         background-color: transparent;
-        border: 1px solid $grey;
+        border: 1px solid $lightgrey;
         border-radius: 3px;
         padding: 5px 10px;
         font-size: 10px;
@@ -104,6 +104,29 @@
         @include font-size($xs-font);
     }
 
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+
+        .swiper-slide {
+            text-align: center;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+    }
+
     .services {
         margin-top: 50px;
 
@@ -129,63 +152,74 @@
             margin-top: 30px;
         }
 
-        label{
+        label {
             color: $black;
             font-weight: normal;
+            float: left;
         }
 
-        button{
+        button {
             border: none;
             color: $darkgrey;
             padding: auto 20px;
             background-color: transparent;
             border-right: 1px solid $darkgrey;
-            &:active{
+
+            &:active {
                 color: $black;
                 box-shadow: none;
             }
-            &:hover{
+
+            &:hover {
                 color: $black;
                 box-shadow: none;
             }
         }
     }
 
-    &.testimonials{
-        h3{
+    &.testimonials {
+        h3 {
             text-transform: uppercase;
             font-weight: 300;
+
             @include font-size($xs-font);
+
             line-height: 1.5;
         }
 
-        p{
-            color: $grey;
+        p {
+            color: $lightgrey;
             margin-top: 30px;
         }
     }
 
-    form{
+    form {
         width: 100%;
-        label{
+
+        label {
             color: $darkgrey;
             font-weight: 600;
             margin-bottom: 5px;
             margin-top: 25px;
+
             @include font-size($xs-font);
-            span{
+
+            span {
                 color: $red;
             }
         }
-        input{
+
+        input {
             border-radius: 2px;
             border-color: $darkgrey;
         }
-        textarea{
+
+        textarea {
             border-radius: 2px;
             border-color: $darkgrey;
         }
-        .btn-orange{
+
+        .btn-orange {
             color: $white;
             margin-top: 20px;
             border-radius: 2px;
@@ -197,17 +231,29 @@
     }
 }
 
-.footer{
+.footer {
     padding: 20px;
-    color: $grey;
-    h3{
+    color: $lightgrey;
+
+    h3 {
         text-transform: uppercase;
+
         @include font-size($xs-font);
-        span{
+
+        span {
             font-weight: 300;
         }
     }
-    i{
-
+    &.iddo{
+        h2{
+            color: $white;
+            text-transform: uppercase;
+            @include font-size($md-font);
+        }
+        h3{
+            text-transform: none;
+            color: $grey;
+            @include font-size($xxs-font);
+        }
     }
 }

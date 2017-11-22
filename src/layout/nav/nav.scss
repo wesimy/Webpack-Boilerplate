@@ -1,12 +1,46 @@
 @import "../../base/index";
 
 .navbar {
-    .container{
+    .container {
+        text-transform: uppercase;
+
         button {
             color: $white;
         }
+
         @media (max-width: map-get($breakpoints, sm)) {
             margin: auto 0;
+        }
+    }
+
+    &.iddo {
+        .navbar-brand {
+            font-weight: 600;
+            margin-right: 100px;
+        }
+
+        .navbar-nav {
+            text-transform: none;
+
+            .nav-link {
+                color: $white;
+            }
+
+            &.sign-up {
+                li {
+                    padding: 8px;
+                    a {
+                        color: $blue;
+                        padding: 5px 10px;
+                        border-radius: 8px;
+                        border: 2px solid $blue;
+                    }
+                }
+
+                @media (max-width: map-get($breakpoints, sm)) {
+                    display: none;
+                }
+            }
         }
     }
 }

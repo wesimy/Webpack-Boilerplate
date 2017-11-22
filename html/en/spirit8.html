@@ -66,11 +66,6 @@
             <span>extraordinary people.</span>
           </p>
         </div>
-        <div class="col-12 text-cenetr">
-          <a href="#about">
-            <i class="fa fa-arrow-down" aria-hidden="true"></i>
-          </a>
-        </div>
       </div>
     </div>
   </div>
@@ -197,32 +192,48 @@
             <span>our clients</span>
           </h2>
         </div>
-        <div class="col">
-          <div class="swiper-container swiper-container-horizontal" data-responsive="true" data-size="5" data-size-s="1" data-size-m="3">
+        <div class="col-12">
+          <div class="swiper-container">
             <div class="swiper-wrapper">
-              <div class="swiper-slide swiper-slide-active">
+              <div class="swiper-slide">
                 <img src="/dist/images/zara.png">
               </div>
-              <div class="swiper-slide swiper-slide-next">
-                <img src="/dist/images/zara.png">
+              <div class="swiper-slide">
+                <img src="/dist/images/lancome.png">
               </div>
               <div class="swiper-slide">
                 <img src="/dist/images/zara.png">
               </div>
               <div class="swiper-slide">
-                <img src="/dist/images/zara.png">
+                <img src="/dist/images/lancome.png">
               </div>
               <div class="swiper-slide">
                 <img src="/dist/images/zara.png">
               </div>
               <div class="swiper-slide">
+                <img src="/dist/images/lancome.png">
+              </div>
+              <div class="swiper-slide">
                 <img src="/dist/images/zara.png">
+              </div>
+              <div class="swiper-slide">
+                <img src="/dist/images/lancome.png">
+              </div>
+              <div class="swiper-slide">
+                <img src="/dist/images/zara.png">
+              </div>
+              <div class="swiper-slide">
+                <img src="/dist/images/lancome.png">
+              </div>
+              <div class="swiper-slide">
+                <img src="/dist/images/zara.png">
+              </div>
+              <div class="swiper-slide">
+                <img src="/dist/images/lancome.png">
               </div>
             </div>
-            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
-              <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-              <span class="swiper-pagination-bullet"></span>
-            </div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
           </div>
         </div>
 
@@ -230,9 +241,7 @@
     </div>
   </div>
 
-  </div>
-
-  <div class="team">
+  <div class="team portfolio">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -244,12 +253,14 @@
             The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
         </div>
         <div class="col-12">
-          <div class="work text-right">
+          <div class="work">
             <label>Filter by type</label>
-            <button onclick="filterSelection('all')" name="category">All</button>
-            <button onclick="filterSelection('webdesign')" name="category">Web Design</button>
-            <button onclick="filterSelection('mobiledesign')" name="category">Mobile Design</button>
-            <button onclick="filterSelection('photography')" name="category">Photography</button>
+            <div class="text-right">
+              <button onclick="filterSelection('all')" name="category">All</button>
+              <button onclick="filterSelection('webdesign')" name="category">Web Design</button>
+              <button onclick="filterSelection('mobiledesign')" name="category">Mobile Design</button>
+              <button onclick="filterSelection('photography')" name="category">Photography</button>
+            </div>
             <div class="row justify-content-center">
               <div class="col-12 col-md-6 col-lg-3">
                 <div class="filterDiv photography all">
@@ -356,7 +367,7 @@
                 <label for="Name">Name
                   <span>&#42;</span>
                 </label>
-                <input type="text" class="form-control" name="Name" autofocus required>
+                <input type="text" class="form-control" name="Name" required>
               </div>
               <div class="col-12 col-md-6">
                 <label for="EmailAddress">Email address
@@ -399,10 +410,19 @@
 
   <script src="../../dist/js/app.en.js"></script>
 
+  <!-- Swiper JS -->
+  <script src="../dist/js/swiper.min.js"></script>
+  <!-- Initialize Swiper -->
   <script>
     var mySwiper = new Swiper('.swiper-container', {
-      speed: 300,
-      spaceBetween: 10
+      slidesPerView: 5,
+      spaceBetween: 30,
+      speed: 400,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+      },
     });
   </script>
 
@@ -420,26 +440,6 @@
       });
     }
   </script>
-
-  <!-- <script>
-    function validateForm() {
-      var x = document.forms["registeration"]["Name"].value;
-      if (x == "") {
-        alert("Name must be filled out");
-        return false;
-      }
-      var x = document.forms["registeration"]["EmailAddress"].value;
-      if (x == "") {
-        alert("Email address must be filled out");
-        return false;
-      }
-      var x = document.forms["registeration"]["Message"].value;
-      if (x == "") {
-        alert("Message must be filled out");
-        return false;
-      }
-    }
-  </script> -->
 
 
 </body>

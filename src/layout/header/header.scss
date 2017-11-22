@@ -37,3 +37,20 @@
         }
     }
 }
+.iddo-header{
+    height: 500px;
+    position: relative;
+    .container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        h1{
+            font-weight: 200;
+        }
+        label{
+            color: $blue;
+            @include font-size($xs-font);
+        }
+    }
+}
