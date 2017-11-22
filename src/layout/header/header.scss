@@ -26,6 +26,8 @@
         }
         i{
             color: $white;
+            width: 50%;
+            margin: 10px auto;
         }
     }
     @media (max-width: map-get($breakpoints, sm)) {

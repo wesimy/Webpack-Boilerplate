@@ -32,19 +32,19 @@
             <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#About">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" href="#Services">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Portfolio</a>
+            <a class="nav-link" href="#Portfolio">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Testimonials</a>
+            <a class="nav-link" href="#Testimonials">Testimonials</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
+            <a class="nav-link" href="#ContactUs">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -67,7 +67,9 @@
           </p>
         </div>
         <div class="col-12 text-cenetr">
-          <i class="fa fa-arrow-down" aria-hidden="true"></i>
+          <a href="#about">
+            <i class="fa fa-arrow-down" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
     </div>
@@ -80,7 +82,7 @@
           <img src="/dist/images/mac.png">
         </div>
         <div class="col-12 col-lg-6">
-          <label>About us</label>
+          <label id="About">About us</label>
           <h2>Some words
             <span>about us</span>
           </h2>
@@ -149,7 +151,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12">
-          <h2>Take a look at
+          <h2 id="Services">Take a look at
             <span>our services</span>
           </h2>
           <p>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
@@ -217,12 +219,13 @@
                 <img src="/dist/images/zara.png">
               </div>
             </div>
+            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+              <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+              <span class="swiper-pagination-bullet"></span>
+            </div>
           </div>
         </div>
-        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
-          <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-          <span class="swiper-pagination-bullet"></span>
-        </div>
+
       </div>
     </div>
   </div>
@@ -233,8 +236,8 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h2>Take a look at
-            <span>our services</span>
+          <h2 id="Portfolio">Take a look at
+            <span>our work</span>
           </h2>
           <p>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
             Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.
@@ -320,7 +323,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12">
-          <h2>Our Clients'
+          <h2 id="Testimonials">Our Clients'
             <span>Testimonials</span>
           </h2>
           <h3>
@@ -339,7 +342,7 @@
     <div class="container">
       <div class="row text-left">
         <div class="col-12">
-          <h2>Feel Free To
+          <h2 id="ContactUs">Feel Free To
             <span>Contact Us</span>
           </h2>
           <p>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
@@ -347,7 +350,7 @@
             The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
         </div>
         <div class="col-12">
-          <form for="registeration" onsubmit="return validateForm()" method="post">
+          <form for="registeration">
             <div class="row">
               <div class="col-12 col-md-6">
                 <label for="Name">Name
@@ -383,13 +386,13 @@
   <div class="footer bg-black">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-6">
+        <div class="col">
           <h3>
             <span>All rights reserved. Copyright &#169; 2014</span> Spirit8</h3>
         </div>
-        <div class="col-6">
+        <!-- <div class="col-6">
 
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -410,15 +413,15 @@
       $(".filterDiv").each(function () {
         var item = $(this);
         if (item.hasClass(c)) {
-          item.show("slow");
+          item.parent().show();
         } else {
-          item.hide("slow");
+          item.parent().hide();
         }
       });
     }
   </script>
 
-  <script>
+  <!-- <script>
     function validateForm() {
       var x = document.forms["registeration"]["Name"].value;
       if (x == "") {
@@ -436,7 +439,7 @@
         return false;
       }
     }
-  </script>
+  </script> -->
 
 
 </body>

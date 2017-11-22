@@ -41,6 +41,7 @@
         color: $darkgrey;
         margin-bottom: 30px;
         padding-left: 15px;
+        list-style-image: url('/dist/images/bullet.png');
 
         @include font-size($xs-font);
 
@@ -185,10 +186,11 @@
             border-color: $darkgrey;
         }
         .btn-orange{
-            width: 15%;
             color: $white;
             margin-top: 20px;
             border-radius: 2px;
+            padding-left: 40px;
+            padding-right: 40px;
             background-color: $orange;
             text-transform: uppercase;
         }

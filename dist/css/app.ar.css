@@ -12245,7 +12245,9 @@ button.swiper-pagination-bullet {
       .header .container p span {
         font-weight: 600; }
     .header .container i {
-      color: #ffffff; }
+      color: #ffffff;
+      width: 50%;
+      margin: 10px auto; }
   @media (max-width: 576px) {
     .header .container {
       padding: 0;
@@ -12303,6 +12305,7 @@ button.swiper-pagination-bullet {
     color: #6c6c6c;
     margin-bottom: 30px;
     padding-right: 15px;
+    list-style-image: url("/dist/images/bullet.png");
     font-size: 12px; }
     @media screen and (min-width: 0) {
       .about ul {
@@ -12468,10 +12471,11 @@ button.swiper-pagination-bullet {
       border-radius: 2px;
       border-color: #6c6c6c; }
     .team form .btn-orange {
-      width: 15%;
       color: #ffffff;
       margin-top: 20px;
       border-radius: 2px;
+      padding-right: 40px;
+      padding-left: 40px;
       background-color: #fcac45;
       text-transform: uppercase; }
 
