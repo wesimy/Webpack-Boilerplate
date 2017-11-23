@@ -12209,6 +12209,10 @@ button.swiper-pagination-bullet {
 .bg-grey {
   background-color: #666666;
   color: #ffffff; }
+
+.bg-blue {
+  background-color: #42b8dd;
+  color: #ffffff; }
 .header {
   height: 500px;
   position: relative; }
@@ -12265,6 +12269,22 @@ button.swiper-pagination-bullet {
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%); }
+    .iddo-header .container i {
+      float: right;
+      padding: 10px;
+      border-radius: 100%;
+      border: 10px solid #ffffff;
+      font-size: 20px;
+      margin-left: 20px; }
+      @media screen and (min-width: 0) {
+        .iddo-header .container i {
+          font-size: 20px; } }
+      @media screen and (min-width: 768px) {
+        .iddo-header .container i {
+          font-size: 22px; } }
+      @media screen and (min-width: 992px) {
+        .iddo-header .container i {
+          font-size: 24px; } }
     .iddo-header .container h1 {
       font-weight: 200; }
     .iddo-header .container label {
@@ -12568,6 +12588,62 @@ button.swiper-pagination-bullet {
     @media screen and (min-width: 992px) {
       .footer.iddo h3 {
         font-size: 12px; } }
+
+.services.iddo {
+  padding: 40px; }
+  .services.iddo i {
+    float: right;
+    padding: 20px;
+    margin-left: 10px;
+    border-radius: 100%;
+    border: 2px solid #ffffff;
+    font-size: 20px; }
+    @media screen and (min-width: 0) {
+      .services.iddo i {
+        font-size: 20px; } }
+    @media screen and (min-width: 768px) {
+      .services.iddo i {
+        font-size: 22px; } }
+    @media screen and (min-width: 992px) {
+      .services.iddo i {
+        font-size: 24px; } }
+  .services.iddo h1 {
+    text-transform: uppercase;
+    font-size: 32px; }
+    @media screen and (min-width: 0) {
+      .services.iddo h1 {
+        font-size: 32px; } }
+    @media screen and (min-width: 768px) {
+      .services.iddo h1 {
+        font-size: 36px; } }
+    @media screen and (min-width: 992px) {
+      .services.iddo h1 {
+        font-size: 40px; } }
+    .services.iddo h1 span {
+      border-bottom: 7px solid #ffffff; }
+  .services.iddo h2 {
+    font-weight: bold;
+    font-size: 12px; }
+    @media screen and (min-width: 0) {
+      .services.iddo h2 {
+        font-size: 12px; } }
+    @media screen and (min-width: 768px) {
+      .services.iddo h2 {
+        font-size: 14px; } }
+    @media screen and (min-width: 992px) {
+      .services.iddo h2 {
+        font-size: 16px; } }
+  .services.iddo p {
+    font-size: 10px; }
+    @media screen and (min-width: 0) {
+      .services.iddo p {
+        font-size: 10px; } }
+    @media screen and (min-width: 768px) {
+      .services.iddo p {
+        font-size: 11px; } }
+    @media screen and (min-width: 992px) {
+      .services.iddo p {
+        font-size: 12px; } }
 html,
 body {
   text-rendering: optimizeLegibility;
@@ -12619,6 +12695,7 @@ h2 {
       color: #42b8dd;
       padding: 5px 10px;
       border-radius: 8px;
+      text-decoration: none;
       border: 2px solid #42b8dd; }
   @media (max-width: 576px) {
     .navbar.iddo .navbar-nav.sign-up {

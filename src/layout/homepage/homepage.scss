@@ -244,15 +244,47 @@
             font-weight: 300;
         }
     }
-    &.iddo{
-        h2{
+
+    &.iddo {
+        h2 {
             color: $white;
             text-transform: uppercase;
+
             @include font-size($md-font);
         }
-        h3{
+
+        h3 {
             text-transform: none;
             color: $grey;
+
+            @include font-size($xxs-font);
+        }
+    }
+}
+
+.services {
+    &.iddo {
+        padding: 40px;
+        i{
+            float: left;
+            padding: 20px;
+            margin-right: 10px;
+            border-radius: 100%;
+            border: 2px solid $white;
+            @include font-size($lg-font);
+        }
+        h1 {
+            text-transform: uppercase;
+            @include font-size($xxl-font);
+            span{
+                border-bottom: 7px solid $white;
+            }
+        }
+        h2{
+            font-weight: bold;
+            @include font-size($sm-font);
+        }
+        p{
             @include font-size($xxs-font);
         }
     }
